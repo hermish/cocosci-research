@@ -37,5 +37,5 @@ def write_file(result_gen, output_file):
     """
     with open(output_file, 'a') as file:
         for item in result_gen:
-            json.dump(item, file, indent=4)
-
+            json_str = json.dumps(item, indent=4)
+            file.write(json_str)
