@@ -1,11 +1,11 @@
-import praw
-from utilities import *
+from utilities import read_credentials, scrape_data, write_file
+from extractors import test_extractor
 
-CREDENTIALS = 'credentials.txt'
-OUTPUTS = ['output.txt']
-SUBREDDITS = ['explainlikeimfive']
-EXTRACTOR = extract_sub_info
 
-reddit = unauthorized_user(CREDENTIALS)
-for sub, out in zip(SUBREDDITS, OUTPUTS):
-	download_info(reddit, sub, out, EXTRACTOR)
+FILE_NAME = 'credentials.txt'
+OUTPUT = 'output.txt'
+EXTRACTOR = test_extractor
+
+credentials = read_credentials(FILE_NAME)
+result = scrape_data(*credentials, EXTRACTOR)
+write_file(result, OUTPUT)

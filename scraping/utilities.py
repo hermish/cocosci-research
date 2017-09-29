@@ -1,29 +1,41 @@
 import praw
 import json
 
-def read_only_credientials(file_name):
-	data = open(file_name)
-	information = [line.rstrip() for line in data]
-	return information
 
-def unauthorized_user(file_name):
-	client_id, secret, agent = read_only_credientials(file_name)
-	reddit = praw.Reddit(client_id=client_id,
-		client_secret=secret,
-		user_agent=agent)
-	return reddit
+def read_credentials(file_name):
+    """
+    Reads and return API credentials from a text file.
+    :param file_name: (str) the name of the file which hold this information
+    :return: [str] the client_id, secret and agent
+    """
+    data = open(file_name)
+    information = [line.rstrip() for line in data]
+    return information
 
-def download_info(reddit, sub, output_file, extractor):
-	subreddit = reddit.subreddit(sub)
-	top_gen = subreddit.top(time_filter='all')
-	outputs = []
-	with open(output_file, 'w') as file:
-		for submission in top_gen:
-			outputs.append(extractor(submission))
-		json_str = json.dumps(outputs)
-		file.write(json_str)
 
-def extract_sub_info(submission):
-	everything = vars(submission)
-	printable = {key:str(value) for key, value in everything.items()}
-	return printable
+def scrape_data(client_id, secret, agent, extractor):
+    """
+    Creates and returns a generator which provides a sequence of outputs to be written.
+    :param client_id: (str) client id for the Reddit API
+    :param secret: (str) client secret for the Reddit API
+    :param agent: (str) user agent description
+    :param extractor: function which extracts the desired information from reddit
+    :return: a generator which yields
+    """
+    reddit = praw.Reddit(client_id=client_id,
+                         client_secret=secret,
+                         user_agent=agent)
+    return extractor(reddit)
+
+
+def write_file(result_gen, output_file):
+    """
+    Writes the contents of the generator into the output file.
+    :param result_gen: (generator) stream of strings to write
+    :param output_file: (str) the name of the file
+    :return: none
+    """
+    with open(output_file, 'a') as file:
+        for item in result_gen:
+            json.dump(item, file, indent=4)
+
