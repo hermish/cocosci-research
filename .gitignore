@@ -1,13 +1,13 @@
-# DATA
+# PROJECT FILES
+.idea/
 
+# DATA
 scraping/output.txt
 
 # CREDENTIALS
-
 scraping/credentials.txt
 
 # OSX GENERATED FILES
-
 .DS_Store
 .DS_Store?
 ._*
