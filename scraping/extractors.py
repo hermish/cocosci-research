@@ -1,8 +1,9 @@
 import time
+from utilities import make_verbose
 
 TEST_SUB = 'explainlikeimfive'
 API_LIMIT = 30
-SLEEP_TIME = 60
+SLEEP_TIME = 65
 
 
 def map_to_values(func, dictionary):
@@ -15,6 +16,7 @@ def map_to_values(func, dictionary):
     return {key: func(value) for key, value in dictionary.items()}
 
 
+@make_verbose(True, False)
 def respect_limit(requests):
     """
     :param requests: (int) the current number of
@@ -24,7 +26,7 @@ def respect_limit(requests):
     """
     if requests + 1 > API_LIMIT:
         time.sleep(SLEEP_TIME)
-        return 0
+        return 1
     return requests + 1
 
 
@@ -38,7 +40,7 @@ def get_posts(reddit, subreddits, mode, time_filter, num_comments):
     :return: (gen) a generator which returns, at every successive call, list of each
         post and the requested number of top comments until exhaustion
     """
-    requests = 0
+    requests = 1
     for sub in subreddits:
         subreddit = reddit.subreddit(sub)
         post_gen = getattr(subreddit, mode)(time_filter=time_filter)

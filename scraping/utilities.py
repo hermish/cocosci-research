@@ -39,3 +39,37 @@ def write_file(result_gen, output_file):
         for item in result_gen:
             json_str = json.dumps(item, indent=4)
             file.write(json_str)
+
+
+def track_call(func):
+    """
+    :param func: (func) the function to be modified
+    :return: (func) a new function with the same behaviour, however with a count
+        attribute which keeps track of how many time exactly the function was called
+    """
+    def wrapper(*args, **kwargs):
+        wrapper.count += 1
+        return func(*args, **kwargs)
+    wrapper.count = 0
+    return wrapper
+
+
+def make_verbose(before, after):
+    """
+    :param before: (bool) whether the arguments should be printed before the
+        function call
+    :param after: (bool) whether the result should be printed after the
+        function call
+    :return: (func) a decorator which replaces a function which the verbose version
+        as specified by its arguments
+    """
+    def wrapper(func):
+        def verbose(*args, **kwargs):
+            if before:
+                print(*args, **kwargs)
+            output = func(*args, **kwargs)
+            if after:
+                print(output)
+            return output
+        return verbose
+    return wrapper
