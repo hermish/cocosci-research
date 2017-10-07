@@ -7,7 +7,9 @@ OUTPUT = 'output.txt'
 OPTIONS = {'subreddits': ['explainlikeimfive'],
            'mode': 'top',
            'time_filter': 'week',
-           'num_comments': 3}
+           'num_comments': 5,
+           'ignore_sub': ['_reddit', ],
+           'ignore_com': ['_replies', '_reddit']}
 EXTRACTOR = lambda reddit: get_posts(reddit, **OPTIONS)
 
 credentials = read_credentials(FILE_NAME)

@@ -6,6 +6,18 @@ API_LIMIT = 30
 SLEEP_TIME = 65
 
 
+def change_attributes(dictionary, to_remove, func):
+    """
+    :param dictionary: (dict)
+    :param to_remove: [str]
+    :param func: (func)
+    :return:
+    """
+    for ignored in to_remove:
+        if ignored in dictionary:
+            dictionary[ignored] = func(dictionary[ignored])
+
+
 def map_to_values(func, dictionary):
     """
     :param func: (function) function to be mapped
@@ -30,13 +42,15 @@ def respect_limit(requests):
     return requests + 1
 
 
-def get_posts(reddit, subreddits, mode, time_filter, num_comments):
+def get_posts(reddit, subreddits, mode, time_filter, num_comments, ignore_sub, ignore_com):
     """
     :param reddit: (reddit) an possibly unauthenticated reddit instance
     :param subreddits: [str] the subreddits to pull data from
     :param mode: (str) the string referring to browsing mode, for example 'rising'
     :param time_filter: (str) the time period for the mode selected
-    :param num_comments: (int) the
+    :param num_comments: (int) the number of comments to select
+    :param ignore_sub: [str]
+    :param ignore_com: [str]
     :return: (gen) a generator which returns, at every successive call, list of each
         post and the requested number of top comments until exhaustion
     """
@@ -47,14 +61,14 @@ def get_posts(reddit, subreddits, mode, time_filter, num_comments):
         requests = respect_limit(requests)
         for submission in post_gen:
             requests = respect_limit(requests)
-            output = [map_to_values(str, vars(submission))]
+            output = [change_attributes(vars(submission), ignore_sub, str)]
             comments_left = num_comments
             requests = respect_limit(requests)
             for comment in submission.comments:
                 requests = respect_limit(requests)
                 if not comments_left:
                     break
-                output.append(map_to_values(str, vars(comment)))
+                output.append(change_attributes(vars(comment), ignore_com, str))
                 comments_left -= 1
             yield output
 

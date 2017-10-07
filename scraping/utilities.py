@@ -35,10 +35,16 @@ def write_file(result_gen, output_file):
     :param output_file: (str) the name of the file
     :return: none
     """
+    later = False
     with open(output_file, 'a') as file:
+        file.write('[')
         for item in result_gen:
+            if later:
+                file.write(',')
             json_str = json.dumps(item, indent=4)
             file.write(json_str)
+            later = True
+        file.write(']')
 
 
 def track_call(func):

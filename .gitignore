@@ -2,7 +2,8 @@
 .idea/
 
 # DATA
-scraping/output.txt
+output/
+output.txt
 
 # CREDENTIALS
 scraping/credentials.txt
