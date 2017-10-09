@@ -8,8 +8,9 @@ OPTIONS = {'subreddits': ['explainlikeimfive'],
            'mode': 'top',
            'time_filter': 'week',
            'num_comments': 5,
-           'ignore_sub': ['_reddit', ],
-           'ignore_com': ['_replies', '_reddit']}
+           'sub_coerce': ['_reddit', 'subreddit', 'author'],
+           'com_coerce': ['_replies', '_reddit', '_submission',
+                          'author', 'subreddit']}
 EXTRACTOR = lambda reddit: get_posts(reddit, **OPTIONS)
 
 credentials = read_credentials(FILE_NAME)
