@@ -2,6 +2,7 @@ import json
 import scipy.stats
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
 from textstat.textstat import textstat
 
 
@@ -44,7 +45,7 @@ class RedditDataJSON:
         file = open(filename, 'r')
         return cls.from_file(file)
 
-    def get_posts_attr(self, attr, sub_type):
+    def get_attr(self, attr, sub_type):
         """
         :param attr: (str) the attribute to retrieve
         :param sub_type: (str) a code indicating whether to look at posts or comments
@@ -65,8 +66,8 @@ class RedditDataJSON:
         :param yfunc: (func) function to apply to each y-value
         :return: (None) plots the images of the x- and y-values
         """
-        xs = [xfunc(x) for x in self.get_posts_attr(xvar, sub_type)]
-        ys = [yfunc(y) for y in self.get_posts_attr(yvar, sub_type)]
+        xs = [xfunc(x) for x in self.get_attr(xvar, sub_type)]
+        ys = [yfunc(y) for y in self.get_attr(yvar, sub_type)]
 
         plt.plot(xs, ys)
         plt.xlabel(xvar)
@@ -84,8 +85,8 @@ class RedditDataJSON:
             regression
         """
         # Generate points
-        xs = [xfunc(x) for x in self.get_posts_attr(xvar, sub_type)]
-        ys = [yfunc(y) for y in self.get_posts_attr(yvar, sub_type)]
+        xs = [xfunc(x) for x in self.get_attr(xvar, sub_type)]
+        ys = [yfunc(y) for y in self.get_attr(yvar, sub_type)]
 
         # Perform analysis
         fit = np.polyfit(xs, ys, 1)
@@ -95,8 +96,8 @@ class RedditDataJSON:
 
         # Plot results
         plt.plot(xs, ys, 'yo', xs, fit_fn(xs), '--k')
-        plt.xlabel(xvar)
-        plt.ylabel(yvar)
+        plt.xlabel(xfunc.__name__ + '(' + xvar + ')')
+        plt.ylabel(yfunc.__name__ + '(' + yvar + ')')
         plt.show()
 
         return r_value ** 2
