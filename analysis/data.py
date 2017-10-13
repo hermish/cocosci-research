@@ -3,6 +3,8 @@ import scipy.stats
 import matplotlib.pyplot as plt
 import numpy as np
 from statsmodels.tsa.stattools import adfuller
+import collections
+
 import seaborn as sns
 
 
@@ -77,13 +79,13 @@ class RedditDataJSON:
             a value for each of the supplied arguments
         """
         means = [np.mean(lst) for lst in args]
-        errors = [np.std(lst) for lst in args]
+        errors = [scipy.stats.sem(lst) for lst in args]
         maxs = [max(lst) for lst in args]
         mins = [min(lst) for lst in args]
         sizes = [len(lst) for lst in args]
 
         return {'means': means,
-                'stds': errors,
+                'errors': errors,
                 'maxs': maxs,
                 'mins': mins,
                 'sizes': sizes}
@@ -163,7 +165,7 @@ class RedditDataJSON:
         plt.ylabel('count')
 
         return {'mean': np.mean(values),
-                'std': np.std(values),
+                'errors': scipy.stats.sem(values),
                 'max': max(values),
                 'min': min(values)}
 
@@ -214,8 +216,7 @@ class RedditDataJSON:
 
         # Plots graph
         index = np.arange(3)
-        plt.bar(index, descriptives['means'])
-        # plt.bar(index, descriptives['means'], yerr=descriptives['stds'])
+        plt.bar(index, descriptives['means'], yerr=descriptives['errors'])
         plt.xlabel('Groups by ' + rank_attr)
         plt.ylabel(self.get_axis_label(func, attr))
         plt.xticks(index, PERC_LABELS)
@@ -251,8 +252,7 @@ class RedditDataJSON:
         descriptives = self.get_descriptives(*groups)
 
         index = np.arange(num_groups)
-        plt.bar(index, descriptives['means'])
-        # plt.bar(index, descriptives['means'], yerr=descriptives['stds'])
+        plt.bar(index, descriptives['means'], yerr=descriptives['errors'])
         plt.xlabel('Groups by ' + self.get_axis_label(group_func, group_attr))
         plt.ylabel(self.get_axis_label(func, attr))
         plt.xticks(index, group_labels)
@@ -261,6 +261,20 @@ class RedditDataJSON:
         f_val, p_val = scipy.stats.f_oneway(*groups)
         additional = {'anova_f': f_val, 'p-value': p_val, 'vars': group_labels}
         return {**descriptives, **additional}
+
+    def categorical_counts(self, attr, func):
+        values = [func(x) for x in self.get_post_attr(attr)]
+        counter = collections.Counter(values)
+        labels, heights = list(counter.keys()), list(counter.values())
+
+        index = np.arange(len(labels))
+        plt.bar(index, heights)
+        plt.xlabel(self.get_axis_label(func, attr))
+        plt.ylabel('counts')
+        plt.xticks(index, labels)
+        plt.show()
+
+        return {'counts': heights}
 
 def test():
     """
