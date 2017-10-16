@@ -6,7 +6,7 @@ output/
 output.txt
 
 # CREDENTIALS
-scraping/credentials.txt
+credentials/
 
 # OSX GENERATED FILES
 .DS_Store

@@ -2,8 +2,8 @@ from utilities import read_credentials, scrape_data, write_file
 from extractors import test_extractor, get_posts
 
 
-FILE_NAME = 'credentials.txt'
-OUTPUT = 'output.txt'
+FILE_NAME = '../credentials/reddit.txt'
+OUTPUT = '../output/2017-10-16.txt'
 OPTIONS = {'subreddits': ['explainlikeimfive'],
            'mode': 'top',
            'time_filter': 'week',

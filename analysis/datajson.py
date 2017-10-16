@@ -8,7 +8,7 @@ import collections
 import seaborn as sns
 
 
-CURRENT = '../output/2017-10-06.txt'
+CURRENT = '../output/2017-10-16*.txt'
 TIME = 'created_utc'
 PERC_LABELS = ('Bottom', 'Middle', 'Top')
 
@@ -23,11 +23,25 @@ class RedditDataJSON:
         """
         :param data:
         """
-        self.posts, self.comment_groups, self.comments = [], [], []
+        self.posts, self.comment_groups = [], []
         for entry in data:
             self.posts.append(entry[0])
             self.comment_groups.append(entry[1:])
-            self.comments.extend(entry[1:])
+
+    @property
+    def best_comments(self):
+        """
+        :return: [dict]
+        """
+        return [comments[0] for comments in self.comment_groups]
+
+    @property
+    def size(self):
+        """
+        :return: (int, int) the dimension: number of posts by the number of comments
+            per each post (assume these are identical.
+        """
+        return len(self.posts), len(self.comment_groups[0])
 
     @classmethod
     def from_file(cls, file):
@@ -194,7 +208,6 @@ class RedditDataJSON:
 
         return {**output, **results_update}
 
-
     def post_perc_groups(self, perc_range, rank_attr, attr, func):
         """
         :param perc_range: (float) the size of the groups top, middle and bottom
@@ -275,14 +288,4 @@ class RedditDataJSON:
         plt.show()
 
         return {'counts': heights}
-
-def test():
-    """
-    Function used primarily for interactive testing
-    """
-    import os
-    os.chdir('analysis')
-
-    def identity(x):
-        return x
 
