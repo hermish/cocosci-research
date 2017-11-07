@@ -22,7 +22,8 @@ def is_serializable(obj):
 def change_attributes(dictionary, to_remove, func):
     """
     :param dictionary: (dict)
-    :param to_remove: [str] the dictionary keys which have values to be transformed
+    :param to_remove: [str] the dictionary keys which have values to be
+        transformed
     :param func: (func) the function to be applied
     :return: (dict) new dictionary with different values, mapping the function
         to the values of the dictionary which are in
@@ -45,9 +46,9 @@ def map_to_values(func, dictionary):
 def respect_limit(requests):
     """
     :param requests: (int) the current number of
-    :return: (int) an updated number of requests, sleeping the required amount of
-        time and resetting if an additional call would push the requests over the
-        specified limit
+    :return: (int) an updated number of requests, sleeping the required amount
+        of time and resetting if an additional call would push the requests over
+        the specified limit
     """
     if requests + 1 > API_LIMIT:
         time.sleep(SLEEP_TIME)
@@ -55,17 +56,20 @@ def respect_limit(requests):
     return requests + 1
 
 
-def get_posts(reddit, subreddits, mode, time_filter, num_comments, sub_coerce, com_coerce):
+def get_posts(reddit, subreddits, mode, time_filter,
+              num_comments, sub_coerce, com_coerce):
     """
     :param reddit: (reddit) an possibly unauthenticated reddit instance
     :param subreddits: [str] the subreddits to pull data from
-    :param mode: (str) the string referring to browsing mode, for example 'rising'
+    :param mode: (str) the string referring to browsing mode, for example
+        'rising'
     :param time_filter: (str) the time period for the mode selected
     :param num_comments: (int) the number of comments to select
-    :param sub_coerce: [str] list of attributes for submissions to coerce to strings
+    :param sub_coerce: [str] list of attributes for submissions to coerce to
+        strings
     :param com_coerce: [str]list of attributes for comments to coerce to strings
-    :return: (gen) a generator which returns, at every successive call, list of each
-        post and the requested number of top comments until exhaustion
+    :return: (gen) a generator which returns, at every successive call, list of
+        each post and the requested number of top comments until exhaustion
     """
     requests = 1
     for sub in subreddits:

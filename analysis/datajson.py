@@ -7,18 +7,14 @@ import collections
 
 import seaborn as sns
 
-PREFIX = '../output/'
-SUFFIXES = ['2017-10-02.txt', '2017-10-16.txt',
-            '2017-10-25.txt', '2017-11-01.txt']
-CURRENTS = [PREFIX + suffix for suffix in SUFFIXES]
 TIME = 'created_utc'
-PERC_LABELS = ('Bottom', 'Middle', 'Top')
+PERCENTILE_LABELS = ('Bottom', 'Middle', 'Top')
 
 
 class RedditDataJSON:
     """
     A class representing the parsed reddit data stored as JSON Objects.
-    Methods allow for quick analyses of data using matplotlib
+    Methods allow for quick analyses of data using math-plot-lib.
     """
 
     def __init__(self, data):
@@ -221,7 +217,8 @@ class RedditDataJSON:
     def post_perc_groups(self, perc_range, rank_attr, attr, func):
         """
         :param perc_range: (float) the size of the groups top, middle and bottom
-        :param rank_attr: (str) the attribute from which to sort into these groups
+        :param rank_attr: (str) the attribute from which to sort into these
+            groups
         :param attr: (str) the raw attribute to measure for group
         :param func: (func) a function which converts this attribute into a
             quantitative value to plot
@@ -229,7 +226,8 @@ class RedditDataJSON:
             the results of running an ANOVA test
         """
         decorated = [(func(x), rank) for x, rank in
-                     zip(self.get_post_attr(attr), self.get_post_attr(rank_attr))]
+                     zip(self.get_post_attr(attr),
+                         self.get_post_attr(rank_attr))]
         decorated.sort(key=lambda pair: pair[1])
 
         values = [pair[0] for pair in decorated]
@@ -242,7 +240,7 @@ class RedditDataJSON:
         plt.bar(index, descriptives['means'], yerr=descriptives['errors'])
         plt.xlabel('Groups by ' + rank_attr)
         plt.ylabel(self.get_axis_label(func, attr))
-        plt.xticks(index, PERC_LABELS)
+        plt.xticks(index, PERCENTILE_LABELS)
         plt.show()
 
         # Performs ANOVA, returns descriptives
@@ -293,7 +291,7 @@ class RedditDataJSON:
             off of
         :param func: (func) the function which is applied to attribute before
             counting
-        :return:
+        :return: (dict) a list og the
         """
         values = [func(x) for x in self.get_post_attr(attr)]
         counter = collections.Counter(values)
