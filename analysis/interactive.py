@@ -3,20 +3,15 @@ from textstat.textstat import textstat
 
 SUBJECTS = ['Mathematics', 'Biology', 'Economics', 'Culture', 'Chemistry', 'Physics',
             'Engineering', 'Technology', 'Repost', 'Other']
-QTYPES = ['How', 'Why', 'What', 'When']
+Q_TYPES = ['How', 'Why', 'What', 'When']
 NEGATION = ['Positive', 'Negative']
-
-
-# GENERAL
-def setup():
-    os.chdir('analysis')
 
 
 def reset():
     cwd = os.getcwd()
     target = cwd + '/datajson.py'
     runfile(target)
-    return RedditDataJSON.from_filename(CURRENT)
+    return RedditDataJSON.from_filenames(CURRENTS)
 
 
 def reload():

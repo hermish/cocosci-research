@@ -7,8 +7,10 @@ import collections
 
 import seaborn as sns
 
-
-CURRENT = '../output/2017-10-16*.txt'
+PREFIX = '../output/'
+SUFFIXES = ['2017-10-02.txt', '2017-10-16.txt',
+            '2017-10-25.txt', '2017-11-01.txt']
+CURRENTS = [PREFIX + suffix for suffix in SUFFIXES]
 TIME = 'created_utc'
 PERC_LABELS = ('Bottom', 'Middle', 'Top')
 
@@ -21,7 +23,7 @@ class RedditDataJSON:
 
     def __init__(self, data):
         """
-        :param data:
+        :param data: [[{}]]
         """
         self.posts, self.comment_groups = [], []
         for entry in data:
@@ -29,17 +31,10 @@ class RedditDataJSON:
             self.comment_groups.append(entry[1:])
 
     @property
-    def best_comments(self):
-        """
-        :return: [dict]
-        """
-        return [comments[0] for comments in self.comment_groups]
-
-    @property
     def size(self):
         """
-        :return: (int, int) the dimension: number of posts by the number of comments
-            per each post (assume these are identical.
+        :return: (int, int) the dimension: number of posts by the number of
+            comments per each post (assume these are identical).
         """
         return len(self.posts), len(self.comment_groups[0])
 
@@ -55,11 +50,24 @@ class RedditDataJSON:
     @classmethod
     def from_filename(cls, filename):
         """
-        :param filename: (str) the filme which to read data from
+        :param filename: (str) the files from which data needs to be read from
         :return: (RedditDataJSON) created object using data
         """
-        file = open(filename, 'r')
-        return cls.from_file(file)
+        with open(filename, 'r') as file:
+            return cls.from_file(file)
+
+    @classmethod
+    def from_filenames(cls, filenames):
+        """
+        :param filenames: [str] the names of the files which need to be read
+        :return: (RedditDataJSON) created object using data
+        """
+        data = []
+        for name in filenames:
+            with open(name, 'r') as file:
+                submissions = json.load(file)
+                data.extend(submissions)
+        return cls(data)
 
     @staticmethod
     def get_axis_label(func, var):
@@ -74,9 +82,10 @@ class RedditDataJSON:
     def get_chunks(sorted_values, width):
         """
         :param width: the number of elements in each group
-        :param sorted_values: [obj] a pre-sorted array from which to select objects
-        :return: ([obj], [obj], [obj]) a tuple containing the the sorted values for the
-            top, middle and bottom group respective
+        :param sorted_values: [obj] a pre-sorted array from which to select
+            objects
+        :return: ([obj], [obj], [obj]) a tuple containing the the sorted values
+            for the top, middle and bottom group respective
         """
         radius = width // 2
         mid = len(sorted_values) // 2
@@ -89,9 +98,10 @@ class RedditDataJSON:
     def get_descriptives(*args):
         """
         :param args: [num]... lists of integer or float values
-        :return: (dict) a dictionary of descriptives, whose values are lists containing
-            a value for each of the supplied arguments
+        :return: (dict) a dictionary of descriptives, whose values are lists
+            containing a value for each of the supplied arguments
         """
+        print(args)
         means = [np.mean(lst) for lst in args]
         errors = [scipy.stats.sem(lst) for lst in args]
         maxs = [max(lst) for lst in args]
@@ -213,10 +223,10 @@ class RedditDataJSON:
         :param perc_range: (float) the size of the groups top, middle and bottom
         :param rank_attr: (str) the attribute from which to sort into these groups
         :param attr: (str) the raw attribute to measure for group
-        :param func: (func) a function which converts this atrribute into a quantitative
-            value to plot
-        :return: (dict) a graph of the top, middle and bottom groups along with the
-            results of running an ANOVA test
+        :param func: (func) a function which converts this attribute into a
+            quantitative value to plot
+        :return: (dict) a graph of the top, middle and bottom groups along with
+            the results of running an ANOVA test
         """
         decorated = [(func(x), rank) for x, rank in
                      zip(self.get_post_attr(attr), self.get_post_attr(rank_attr))]
@@ -243,21 +253,23 @@ class RedditDataJSON:
     def compare_groups(self, group_labels, group_func, group_attr, attr, func):
         """
         :param group_labels: [str] the names of each of the categories
-        :param group_func: (func) a function which takes an attribute and returns either
-            the label of the group which it is in, or the empty string, if it is not
-            to be include
+        :param group_func: (func) a function which takes an attribute and
+            returns either the label of the group which it is in, or the empty
+            string, if it is not to be included
         :param group_attr: the attribute on which the grouping is based
         :param attr: the attribute which the y-values will be based on
-        :param func: a function which takes in this attribute and returns the values
-            which compose the height of the graph
-        :return:
+        :param func: a function which takes in this attribute and returns the
+            values which compose the height of the graph
+        :return: (dict) a dictionary containing descriptive along with a result
+            of running an analysis of variance on the groups
         """
         num_groups = len(group_labels)
         group_map = {label: num for label, num in
                      zip(group_labels, range(num_groups))}
         groups = [[] for _ in range(num_groups)]
         decorated = [(func(x), group_func(y)) for x, y in
-                     zip(self.get_post_attr(attr), self.get_post_attr(group_attr))]
+                     zip(self.get_post_attr(attr),
+                         self.get_post_attr(group_attr))]
         for value, group in decorated:
             if group:
                 groups[group_map[group]].append(value)
@@ -276,6 +288,13 @@ class RedditDataJSON:
         return {**descriptives, **additional}
 
     def categorical_counts(self, attr, func):
+        """
+        :param attr: (str) the attribute off which the counts are to be based
+            off of
+        :param func: (func) the function which is applied to attribute before
+            counting
+        :return:
+        """
         values = [func(x) for x in self.get_post_attr(attr)]
         counter = collections.Counter(values)
         labels, heights = list(counter.keys()), list(counter.values())
@@ -288,4 +307,3 @@ class RedditDataJSON:
         plt.show()
 
         return {'counts': heights}
-

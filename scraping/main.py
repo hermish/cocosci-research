@@ -3,7 +3,7 @@ from extractors import test_extractor, get_posts
 
 
 FILE_NAME = '../credentials/reddit.txt'
-OUTPUT = '../output/2017-10-16.txt'
+OUTPUT = '../output/2017-11-01.txt'
 OPTIONS = {'subreddits': ['explainlikeimfive'],
            'mode': 'top',
            'time_filter': 'week',
