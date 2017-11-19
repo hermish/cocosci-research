@@ -1,9 +1,10 @@
-from utilities import read_credentials, scrape_data, write_file
-from extractors import test_extractor, get_posts
-
+from utilities import ContentRow, read_credentials, scrape_data, write_json_file
+from extractors import get_posts, top_comments, get_posts_alt
 
 FILE_NAME = '../credentials/reddit.txt'
-OUTPUT = '../output/2017-11-01.txt'
+OUTPUT = '../output/2017-11-18(alt).txt'
+
+# EXTRACTOR
 OPTIONS = {'subreddits': ['explainlikeimfive'],
            'mode': 'top',
            'time_filter': 'week',
@@ -11,8 +12,16 @@ OPTIONS = {'subreddits': ['explainlikeimfive'],
            'sub_coerce': ['_reddit', 'subreddit', 'author'],
            'com_coerce': ['_replies', '_reddit', '_submission',
                           'author', 'subreddit']}
-EXTRACTOR = lambda reddit: get_posts(reddit, **OPTIONS)
+EXTRACTOR = lambda reddit: get_posts_alt(reddit, **OPTIONS)
 
 credentials = read_credentials(FILE_NAME)
-result = scrape_data(*credentials, EXTRACTOR)
-write_file(result, OUTPUT)
+result_gen = scrape_data(*credentials, EXTRACTOR)
+write_json_file(result_gen, OUTPUT)
+
+# CSV EXPERIMENTS
+# NEW_OPTIONS = {'subreddit': 'explainlikeimfive',
+#                'time_filter': 'week',
+#                'num_comments': 5}
+# NEW_EXTRACTOR = lambda reddit: top_comments(reddit, **NEW_OPTIONS)
+# LOCATIONS = {'comment': OUTPUT + 'comment',
+#              'post': OUTPUT + 'post'}

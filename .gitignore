@@ -4,6 +4,7 @@
 # DATA
 output/
 output.txt
+supplementary/
 
 # CREDENTIALS
 credentials/

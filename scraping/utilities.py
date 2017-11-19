@@ -2,6 +2,52 @@ import praw
 import json
 
 
+class ContentRow:
+    """
+    A class representing a row of data in a csv file, generated from arbitrary
+    objects, with a label.
+    """
+    def __init__(self, type, obj, num):
+        """
+        :param type: (str) the type of the object being described as a row
+        :param obj: (obj) the object being coerced into a csv
+        :param num: (num) the number corresponding the object, or rather, the
+            row number
+        """
+        self.num = num
+        self.type = type
+        obj_dict = vars(obj)
+        self.attributes = sorted(obj_dict)
+        self.values = [obj_dict[key] for key in self.attributes]
+
+    def __str__(self):
+        output = [str(item) for item in self.values]
+        for pos in range(output):
+            updated = repr(output[pos])
+            if ',' in output[pos]:
+                updated = output[pos]
+        prefix = str(self.num) + ','
+        return prefix + ','.join(output)
+
+    @staticmethod
+    def convert_to_csv(content_iter, file_names):
+        """
+        :param content_iter: (gen) a generator of content rows, perhaps with
+            rows of multiple different types
+        :param file_names: {str: str} a dictionary which maps the type of row
+            to the corresponding filename in which it belongs
+        :return: (None) writes to each of these files
+        """
+        type_to_file = {type: open(name, 'w') for
+                        type, name in file_names.items()}
+        for row in content_iter:
+            file = type_to_file[row.type]
+            file.write(str(row))
+            file.write('/n')
+        for open_file in type_to_file.values():
+            open_file.close()
+
+
 def read_credentials(file_name):
     """
     Reads and return API credentials from a text file.
@@ -15,11 +61,13 @@ def read_credentials(file_name):
 
 def scrape_data(client_id, secret, agent, extractor):
     """
-    Creates and returns a generator which provides a sequence of outputs to be written.
+    Creates and returns a generator which provides a sequence of outputs to be
+        written.
     :param client_id: (str) client id for the Reddit API
     :param secret: (str) client secret for the Reddit API
     :param agent: (str) user agent description
-    :param extractor: function which extracts the desired information from reddit
+    :param extractor: function which extracts the desired information from
+        reddit
     :return: a generator which yields
     """
     reddit = praw.Reddit(client_id=client_id,
@@ -28,7 +76,7 @@ def scrape_data(client_id, secret, agent, extractor):
     return extractor(reddit)
 
 
-def write_file(result_gen, output_file):
+def write_json_file(result_gen, output_file):
     """
     Writes the contents of the generator into the output file.
     :param result_gen: (generator) stream of strings to write
@@ -51,7 +99,8 @@ def track_call(func):
     """
     :param func: (func) the function to be modified
     :return: (func) a new function with the same behaviour, however with a count
-        attribute which keeps track of how many time exactly the function was called
+        attribute which keeps track of how many time exactly the function was
+        called
     """
     def wrapper(*args, **kwargs):
         wrapper.count += 1
@@ -66,8 +115,8 @@ def make_verbose(before, after):
         function call
     :param after: (bool) whether the result should be printed after the
         function call
-    :return: (func) a decorator which replaces a function which the verbose version
-        as specified by its arguments
+    :return: (func) a decorator which replaces a function which the verbose
+        version as specified by its arguments
     """
     def wrapper(func):
         def verbose(*args, **kwargs):

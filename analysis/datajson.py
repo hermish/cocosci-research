@@ -60,6 +60,7 @@ class RedditDataJSON:
         """
         data = []
         for name in filenames:
+            print(name)
             with open(name, 'r') as file:
                 submissions = json.load(file)
                 data.extend(submissions)
@@ -214,7 +215,7 @@ class RedditDataJSON:
 
         return {**output, **results_update}
 
-    def post_perc_groups(self, perc_range, rank_attr, attr, func):
+    def post_perc_groups(self, perc_range, rank_attr, rank_func, attr, func):
         """
         :param perc_range: (float) the size of the groups top, middle and bottom
         :param rank_attr: (str) the attribute from which to sort into these
@@ -225,7 +226,7 @@ class RedditDataJSON:
         :return: (dict) a graph of the top, middle and bottom groups along with
             the results of running an ANOVA test
         """
-        decorated = [(func(x), rank) for x, rank in
+        decorated = [(func(x), rank_func(rank)) for x, rank in
                      zip(self.get_post_attr(attr),
                          self.get_post_attr(rank_attr))]
         decorated.sort(key=lambda pair: pair[1])
