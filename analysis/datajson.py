@@ -60,7 +60,6 @@ class RedditDataJSON:
         """
         data = []
         for name in filenames:
-            print(name)
             with open(name, 'r') as file:
                 submissions = json.load(file)
                 data.extend(submissions)
@@ -98,7 +97,6 @@ class RedditDataJSON:
         :return: (dict) a dictionary of descriptives, whose values are lists
             containing a value for each of the supplied arguments
         """
-        print(args)
         means = [np.mean(lst) for lst in args]
         errors = [scipy.stats.sem(lst) for lst in args]
         maxs = [max(lst) for lst in args]
