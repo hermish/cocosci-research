@@ -236,8 +236,6 @@ var thankYouBlock = {
   text: converter.makeHtml(thankYouMessage)
 }
 
-
-
 /* RUN EXPERIMENT */
 var timeline = [consentBlock,
   instructionsBlock,
