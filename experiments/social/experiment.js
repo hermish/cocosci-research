@@ -89,14 +89,17 @@ On the following pages, you will see 10 questions that people have asked on a
 
 var questions = {
   highText: [
-    'How do fingernails grow?',
-    'What purpose does a magnet serve in a speaker or headphone?',
-    'Why do we feel sleepy in warm temperature rather than cold temperature?',
-    'Apparently moonquakes can be caused by tides, but the moon is tidally ' +
-      'locked to earth. What tide causes these to occur?',
-    'What does aspirin do that helps prevent heart attacks, stroke and now ' +
-      'cancer?'],
-  highScores: [1000, 1000, 1000, 1000, 1000],
+    'How do small animals not get hurt by rain drops?',
+    'Why does drinking a glass of water help with a dry throat or coughing? ' +
+    	'The water goes down the esophagus while the problems it seems to ' +
+    	'fix are in the trachea.',
+    'Why is tupperware wet coming out of the dishwasher, when plates and ' +
+    	'glasses are all dry?',
+    "What happens to caterpillars who haven't stored the usual amount of " +
+    	"calories when they try to turn into butterflies?",
+    'How do we know how hot the core of the Earth is and everything ' +
+    	'underground if the farthest we have dug a hole is just 8 miles?'],
+  highScores: [16809, 14714, 13453, 12895, 13680],
   mediumText: [
     'Why do some people get sick when the weather changes?',
     'Why did the US colonies form separately instead of just one big colony?',
@@ -104,7 +107,7 @@ var questions = {
     'How do we know how much gold has not been mined yet?',
     'Is there a limit to the number of pathogens our immune system can ' +
       'remember?'],
-    mediumScores: [100, 100, 100, 100, 100]
+    mediumScores: [16, 13, 16, 14, 13]
 };
 
 
@@ -154,15 +157,15 @@ window`;
 
 /* RANOMIZATION TOOLS */
 function createJudgmentTemplate(judgments) {
-  quesArr = judgments.questions;
-  choiceArr = judgments.choices;
-  grouped = [];
+  var quesArr = judgments.questions;
+  var choiceArr = judgments.choices;
+  var grouped = [];
   for (var i = 0; i < quesArr.length; i++) {
     grouped.push([quesArr[i], choiceArr[i]]);
   }
-  randomGrouped = jsPsych.randomization.shuffle(grouped);
-  randomQuestions = [];
-  randomChoices = [];
+  var randomGrouped = jsPsych.randomization.shuffle(grouped);
+  var randomQuestions = [];
+  var randomChoices = [];
   for (var i = 0; i < randomGrouped.length; i++) {
     randomQuestions.push(randomGrouped[i][0]);
     randomChoices.push(randomGrouped[i][1]);
@@ -177,22 +180,28 @@ function createJudgmentTemplate(judgments) {
 };
 
 function assignScores(questions) {
-  allQuestions = questions.highText.concat(questions.mediumText);
-  scoreArr = [questions.highScores, questions.mediumScores];
-  randomGroups = jsPsych.randomization.shuffle(scoreArr);
-  allScores = jsPsych.randomization.shuffle(randomGroups[0]).concat(
-    jsPsych.randomization.shuffle(randomGroups[1]));
+  var groupID = jsPsych.randomization.sample(['normal', 'reversed'], 
+    1, false);
+  groupID = groupID[0];
+  jsPsych.data.addProperties({condition: groupID});
+  if (groupID === 'normal') {
+    var scoreArr = [questions.highScores, questions.mediumScores];
+  } else {
+    var scoreArr = [questions.mediumScores, questions.highScores];
+  }
+  var allScores = jsPsych.randomization.shuffle(scoreArr[0]).concat(
+    jsPsych.randomization.shuffle(scoreArr[1]));
+  var allQuestions = questions.highText.concat(questions.mediumText);
   return [allQuestions, allScores];
 };
 
 function createPreambles(questionScores) {
-  allQuestions = questionScores[0];
-  allScores = questionScores[1];
-  preambles = [];
+  var allQuestions = questionScores[0];
+  var allScores = questionScores[1];
+  var preambles = [];
   for (var i = 0; i < allQuestions.length; i++) {
-    var text = `### Question
-> *[${allScores[i]} upvotes]*\n> ${allQuestions[i]}\n
-### Your Responses`;
+    var text = '### Question\n> *[' + allScores[i].toString() + 
+      ' upvotes]*\n> ' + allQuestions[i].toString() + '\n### Your Responses';
     preambles.push(
       {preamble: converter.makeHtml(text)}
     );
