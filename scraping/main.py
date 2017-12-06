@@ -2,7 +2,7 @@ from utilities import ContentRow, read_credentials, scrape_data, write_json_file
 from extractors import get_posts, top_comments, get_posts_alt
 
 FILE_NAME = '../credentials/reddit.txt'
-OUTPUT = '../output/2017-11-18(alt).txt'
+OUTPUT = '../output/2017-11-25.txt'
 
 # EXTRACTOR
 OPTIONS = {'subreddits': ['explainlikeimfive'],
