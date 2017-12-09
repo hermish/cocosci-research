@@ -1,3 +1,6 @@
+# NODE
+node_modules
+
 # PROJECT FILES
 .idea/
 
@@ -119,3 +122,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+
