@@ -85,9 +85,9 @@ var judgments = Object.freeze({
 //        'Do you think the answer to this question would tell you something that ' +
 //            'applies only to what is being explained, or would it tell you something ' +
 //            'that applies more broadly to other cases that are similar?',
-//        'Do you think the answer to this question is likely to be simple or complex?',
+        'Do you think the answer to this question is likely to be simple or complex?',
 //        'How much do you know about the topic of this question?',
-        'To what extent do you think this question really demands an explanation?',
+//        'To what extent do you think this question really demands an explanation?',
         'Does the question itself contain information that surprises you?',
         'How confident are you that you know the correct answer to this question?'
 //        'Do you think the "right" answer to this question is just a matter of ' +
@@ -102,9 +102,9 @@ var judgments = Object.freeze({
         ['no special expertise required', '', '', '',
             'a lot of special expertise required'],
 //        ['very narrow application', '', '', '', 'very broad application'],
-//        ['very simple', '', '', '', 'very complex'],
+        ['very simple', '', '', '', 'very complex'],
 //        ['not very much', '', '', '', 'a lot'],
-        ['definitely does not', '', '', '', 'definitely does'],
+//        ['definitely does not', '', '', '', 'definitely does'],
         ['not surprising at all', '', '', '', 'very surprising'],
         ['not confident at all', '', '', '', 'very confident']
 //        ['definitely not', '', '', '', 'definitely']
@@ -114,13 +114,13 @@ var judgments = Object.freeze({
 
 var questions = {
     groupA: [
-         "Why do you feel sick and not hungry when you haven't eaten?",
-         "How does sleep restore the body's energy?",
-         'Why waves? All energy transfer in nature from one point to another happens in waves. Light, sound, even ' +
+        "Why do you feel sick and not hungry when you haven't eaten?",
+        "How does sleep restore the body's energy?",
+        'Why waves? All energy transfer in nature from one point to another happens in waves. Light, sound, even ' +
             'gravity travels in waves. Which fundamental property of nature is responsible for wave-like nature? ' +
             'Are there other non-wave-like ways to transfer energy from one point to another?',
-         'How do activated carbon filters work?',
-         'Why must a country "declare war" before attacking?'
+        'How do activated carbon filters work?',
+        'Why must a country "declare war" before attacking?'
     ],
     groupB: [
         'Why are bubbles round?',
@@ -134,9 +134,9 @@ var questions = {
 };
 
 
-var HIGH_SCORES = 3365;
-var LOW_SCORES = 33;
-var STDEV = 10;
+var HIGH_SCORES = 3365,
+    LOW_SCORES = 33,
+    STDEV = 10;
 
 /* RANDOMIZATION TOOLS */
 function gaussRandom() {
@@ -167,9 +167,9 @@ function createJudgmentTemplate(judgments) {
         return [element, allChoices[index]];
     });
 
-    var randomGrouped = jsPsych.randomization.shuffle(grouped),
-        randomQuestions = randomGrouped.map(function (pair) {return pair[0]; }),
-        randomChoices = randomGrouped.map(function (pair) {return pair[1]; });
+    var randomGrouped = jsPsych.randomization.shuffle(grouped);
+    var randomQuestions = randomGrouped.map(function (pair) {return pair[0]; });
+    var randomChoices = randomGrouped.map(function (pair) {return pair[1]; });
 
     return {
         questions: randomQuestions,
@@ -185,8 +185,8 @@ function assignScores(questions) {
         lowScores = getNormalRandom(LOW_SCORES, STDEV, 5);
 
 
-    var allQuestions = questions.groupA.concat(questions.groupB),
-        allScores = groupID === 'highA' ? highScores.concat(lowScores) :
+    var allQuestions = questions.groupA.concat(questions.groupB);
+    var allScores = groupID === 'highA' ? highScores.concat(lowScores) :
                 lowScores.concat(highScores);
 
     var grouped = allQuestions.map(function (element, index) {
@@ -203,7 +203,7 @@ var converter = new showdown.Converter();
 var consentBlock = {
     type: 'survey-multi-choice',
     preamble: [converter.makeHtml(consentPage)],
-    required: true,
+    required: [true],
     questions: [''],
     options: [[
         'I do not consent to participate',
@@ -228,6 +228,7 @@ var randomJudgements = createJudgmentTemplate(judgments);
 var judgementBlock = {
     type: 'survey-likert',
     questions: randomJudgements.questions,
+    required: [true, true, true, true, true, true, true],
     randomize_order: true,
     labels: randomJudgements.choices
 };
@@ -238,8 +239,8 @@ judgementBlock.timeline = [];
 for (var pos = 0; pos < questionScores.length; pos++) {
     var questionText = questionScores[pos][0];
     var questionScore = questionScores[pos][1];
-    var text = '### Question\n' + '> ' + questionText + '\n\n' +
-        '> *This question received ' + questionScore.toString() + ' upvotes*\n\n' +
+    var text = '### Question\n' + '> **' + questionText + '**\n\n' +
+        '> **' + questionScore.toString() + '** people upvoted this question\n\n' +
         '### Your Responses';
     judgementBlock.timeline.push(
         {preamble: converter.makeHtml(text)}
