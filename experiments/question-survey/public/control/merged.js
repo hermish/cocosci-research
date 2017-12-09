@@ -76,57 +76,60 @@ thankYouMessage = thankYouMessage.join('\n');
 var judgments = Object.freeze({
     questions: [
         'How curious are you about the answer to this question?',
-        'Is this question well-written?',
-        'Do you think the answer to this question is likely to have a known answer?',
+//        'Is this question well-written?',
+//        'Do you think the answer to this question is likely to have a known answer?',
         'To what extent would knowing the answer to this question be useful to ' +
             'you in the future?',
         'Have you ever thought about or asked yourself this question before?',
         'Do you think you need to be an expert to answer this question?',
-        'Do you think the answer to this question would tell you something that ' +
-            'applies only to what is being explained, or would it tell you something ' +
-            'that applies more broadly to other cases that are similar?',
-        'Do you think the answer to this question is likely to be simple or complex?',
-        'How much do you know about the topic of this question?',
+//        'Do you think the answer to this question would tell you something that ' +
+//            'applies only to what is being explained, or would it tell you something ' +
+//            'that applies more broadly to other cases that are similar?',
+//        'Do you think the answer to this question is likely to be simple or complex?',
+//        'How much do you know about the topic of this question?',
         'To what extent do you think this question really demands an explanation?',
         'Does the question itself contain information that surprises you?',
-        'How confident are you that you know the correct answer to this question?',
-        'Do you think the "right" answer to this question is just a matter of ' +
-            'opinion?'],
+        'How confident are you that you know the correct answer to this question?'
+//        'Do you think the "right" answer to this question is just a matter of ' +
+//            'opinion?'
+    ],
     choices: [
         ['not curious at all', '', '', '', 'very curious'],
-        ['not well-written at all', '', '', '', 'very well-written'],
-        ['definitely not', '', '', '', 'definitely'],
+//        ['not well-written at all', '', '', '', 'very well-written'],
+//        ['definitely not', '', '', '', 'definitely'],
         ['not useful at all', '', '', '', 'very useful'],
         ['never', '', '', '', 'often'],
         ['no special expertise required', '', '', '',
             'a lot of special expertise required'],
-        ['very narrow application', '', '', '', 'very broad application'],
-        ['very simple', '', '', '', 'very complex'],
-        ['not very much', '', '', '', 'a lot'],
+//        ['very narrow application', '', '', '', 'very broad application'],
+//        ['very simple', '', '', '', 'very complex'],
+//        ['not very much', '', '', '', 'a lot'],
         ['definitely does not', '', '', '', 'definitely does'],
         ['not surprising at all', '', '', '', 'very surprising'],
-        ['not confident at all', '', '', '', 'very confident'],
-        ['definitely not', '', '', '', 'definitely']
+        ['not confident at all', '', '', '', 'very confident']
+//        ['definitely not', '', '', '', 'definitely']
     ]
 });
 /* SURVEY QUESTIONS */
 
 var questions = {
     groupA: [
-        'When bacteria die, for example when boiling water, where do their corpses go?',
-        'What occurs physically that causes a person to foam at the mouth?',
-        'How do scientists know what the global temperature was millions of years ago?',
-        'Why is CPR for drowning different than CPR for people who collapse from heart problems? e.g rescue ' +
-            'breaths are recommended for one but not the other.',
-        'How are tunnels that go underwater built?'
+         "Why do you feel sick and not hungry when you haven't eaten?",
+         "How does sleep restore the body's energy?",
+         'Why waves? All energy transfer in nature from one point to another happens in waves. Light, sound, even ' +
+            'gravity travels in waves. Which fundamental property of nature is responsible for wave-like nature? ' +
+            'Are there other non-wave-like ways to transfer energy from one point to another?',
+         'How do activated carbon filters work?',
+         'Why must a country "declare war" before attacking?'
     ],
     groupB: [
         'Why are bubbles round?',
-        'How do activated carbon filters work?',
-        'Why are 9mm bullets less dangerous than 7.62 or even 5.56 ones? Shouldn\'t they deal more damage with ' +
-            'bigger size?',
-        'Do multivitamins and Omega-3 pills actually do anything? or is it more of a placebo-type thing?',
-        'Why does the eastern half of the United States have colder winters than the western half?'
+        'How is research carried out in order to constantly develop and improve CPUs and GPUs?',
+        'What are the biological advantages and disadvantages of trees shedding their leaves vs keeping them ' +
+            'all year round (deciduous vs coniferous)?',
+        'How do such small doses of things like cocaine and heroin kill you? How do these small powders have such ' +
+            'a big effect on your body?',
+        'Why does the eastern half of the United States have colder winters than the western half?',
     ]
 };
 
