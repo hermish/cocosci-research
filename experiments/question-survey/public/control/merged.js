@@ -1,3 +1,85 @@
+/* REVISED PLUGIN */
+
+jsPsych.plugins['survey-likert'] = (function () {
+    var plugin = {};
+    plugin.trial = function(display_element, trial) {
+    // default parameters for the trial
+        trial.preamble = typeof trial.preamble === 'undefined' ? "" : trial.preamble;
+
+        // if any trial variables are functions
+        // this evaluates the function and replaces
+        // it with the output of the function
+        trial = jsPsych.pluginAPI.evaluateFunctionParameters(trial);
+
+        // show preamble text
+        display_element.append($('<div>', {
+            "id": 'jspsych-survey-likert-preamble',
+            "class": 'jspsych-survey-likert-preamble'
+        }));
+
+        $('#jspsych-survey-likert-preamble').html(trial.preamble);
+
+        display_element.append('<form id="jspsych-survey-likert-form">');
+        // add likert scale questions
+        for (var i = 0; i < trial.questions.length; i++) {
+            form_element = $('#jspsych-survey-likert-form');
+            // add question
+            form_element.append('<label class="jspsych-survey-likert-statement">' + trial.questions[i] + '</label>');
+            // add options
+            var width = 100 / trial.labels[i].length;
+            options_string = '<ul class="jspsych-survey-likert-opts" data-radio-group="Q' + i + '">';
+            for (var j = 0; j < trial.labels[i].length; j++) {
+                  // modification1: I added "required"
+                options_string += '<li style="width:' + width + '%"><input type="radio" name="Q' + i + '" value="' + j + '" required><label class="jspsych-survey-likert-opt-label">' + trial.labels[i][j] + '</label></li>';
+            }
+            options_string += '</ul>';
+            form_element.append(options_string);
+        }
+
+        // modification2
+        form_element.append($('<input>', {
+            'type': 'submit',
+            'class': 'jspsych-survey-likert jspsych-btn',
+            'value': 'Submit Answers'
+        }));
+
+        form_element.submit(function(event) { // modification3
+            event.preventDefault(); // modification4
+
+            // measure response time
+            var endTime = (new Date()).getTime();
+            var response_time = endTime - startTime;
+
+            // create object to hold responses
+            var question_data = {};
+            $("#jspsych-survey-likert-form .jspsych-survey-likert-opts").each(function(index) {
+                var id = $(this).data('radio-group');
+                var response = $('input[name="' + id + '"]:checked').val();
+                if (typeof response == 'undefined') {
+                    response = -1;
+                }
+                var obje = {};
+                obje[id] = response;
+                $.extend(question_data, obje);
+            });
+
+            // save data
+            var trial_data = {
+                "rt": response_time,
+                "responses": JSON.stringify(question_data)
+            };
+
+            display_element.html('');
+
+            // next trial
+            jsPsych.finishTrial(trial_data);
+        });
+
+        var startTime = (new Date()).getTime();
+  };
+  return plugin;
+})();
+
 /* TEXT LITERALS */
 var consentPage = [
     '# Consent to Participate in Research\n',
@@ -63,8 +145,8 @@ var instructions = [
 
 var thankYouMessage = [
     '# Thank you!\n',
-    'The survey is now complete, thank you for your participatation. Any key you press will now take you to a ' +
-        'blank screen, after which you may close this window\n'
+    'The survey is now complete, thank you for your participatation. Here is your unique SECRET key: AJFHBG897. ' +
+        'Please copy and paste this code in the box of the HIT page for the payment to process.'
 ];
 
 consentPage = consentPage.join('\n');
@@ -76,38 +158,17 @@ thankYouMessage = thankYouMessage.join('\n');
 var judgments = Object.freeze({
     questions: [
         'How curious are you about the answer to this question?',
-//        'Is this question well-written?',
-//        'Do you think the answer to this question is likely to have a known answer?',
-        'To what extent would knowing the answer to this question be useful to ' +
-            'you in the future?',
-        'Have you ever thought about or asked yourself this question before?',
-        'Do you think you need to be an expert to answer this question?',
-//        'Do you think the answer to this question would tell you something that ' +
-//            'applies only to what is being explained, or would it tell you something ' +
-//            'that applies more broadly to other cases that are similar?',
-        'Do you think the answer to this question is likely to be simple or complex?',
-//        'How much do you know about the topic of this question?',
-//        'To what extent do you think this question really demands an explanation?',
-        'Does the question itself contain information that surprises you?',
-        'How confident are you that you know the correct answer to this question?'
-//        'Do you think the "right" answer to this question is just a matter of ' +
-//            'opinion?'
+        'How confident are you that you know the correct answer to this question?',
+        'To what extent would knowing the answer to this question be useful to you in the future?',
+        'How popular do you think this question is?',
+        'How well-written do you think this question is?'
     ],
     choices: [
-        ['not curious at all', '', '', '', 'very curious'],
-//        ['not well-written at all', '', '', '', 'very well-written'],
-//        ['definitely not', '', '', '', 'definitely'],
-        ['not useful at all', '', '', '', 'very useful'],
-        ['never', '', '', '', 'often'],
-        ['no special expertise required', '', '', '',
-            'a lot of special expertise required'],
-//        ['very narrow application', '', '', '', 'very broad application'],
-        ['very simple', '', '', '', 'very complex'],
-//        ['not very much', '', '', '', 'a lot'],
-//        ['definitely does not', '', '', '', 'definitely does'],
-        ['not surprising at all', '', '', '', 'very surprising'],
-        ['not confident at all', '', '', '', 'very confident']
-//        ['definitely not', '', '', '', 'definitely']
+        ['not curious at all', '', '', '', '', '', 'very curious'],
+        ['not confident at all', '', '', '', '', '', 'very confident'],
+        ['not useful at all', '', '', '', '', '', 'very useful'],
+        ['not at all', '', '', '', '', '', 'very popular'],
+        ['not at all', '', '', '', '', '',  'very well-written']
     ]
 });
 /* SURVEY QUESTIONS */
@@ -192,7 +253,7 @@ function assignScores(questions) {
     var grouped = allQuestions.map(function (element, index) {
         return [element, Math.round(allScores[index])];
     });
-
+    
     return jsPsych.randomization.shuffle(grouped);
 }
 
@@ -225,15 +286,17 @@ var instructionsBlock = {
 
 
 var randomJudgements = createJudgmentTemplate(judgments);
+jsPsych.data.addProperties({randomJudgements: randomJudgements.questions});
 var judgementBlock = {
     type: 'survey-likert',
     questions: randomJudgements.questions,
     required: [true, true, true, true, true, true, true],
-    randomize_order: true,
+    randomize_order: false,
     labels: randomJudgements.choices
 };
 
 var questionScores = assignScores(questions);
+jsPsych.data.addProperties({questionScores: questionScores});
 
 judgementBlock.timeline = [];
 for (var pos = 0; pos < questionScores.length; pos++) {
@@ -247,21 +310,9 @@ for (var pos = 0; pos < questionScores.length; pos++) {
     );
 }
 
-var thankYouBlock = {
+var bufferBlock = {
     type: 'text',
-    text: converter.makeHtml(thankYouMessage)
-};
-
-/* RUN EXPERIMENT */
-var timeline = [
-    consentBlock,
-    instructionsBlock,
-    judgementBlock,
-    thankYouBlock
-];
-
-jsPsych.init({
-    timeline: timeline,
+    text: converter.makeHtml('Press any key to continue.'),
     on_finish: function () {
         $.ajax({
             type: "POST",
@@ -274,4 +325,23 @@ jsPsych.init({
             window.location.href = "/";
         })
     }
+};
+
+var thankYouBlock = {
+    type: 'text',
+    text: converter.makeHtml(thankYouMessage),
+    cont_key: ['/']
+};
+
+/* RUN EXPERIMENT */
+var timeline = [
+    consentBlock,
+    instructionsBlock,
+    judgementBlock,
+    bufferBlock,
+    thankYouBlock
+];
+
+jsPsych.init({
+    timeline: timeline,
 });
