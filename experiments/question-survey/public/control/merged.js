@@ -160,7 +160,7 @@ var judgments = Object.freeze({
         'How curious are you about the answer to this question?',
         'How confident are you that you know the correct answer to this question?',
         'To what extent would knowing the answer to this question be useful to you in the future?',
-        'How popular do you think this question is?',
+        'How popular do you think this question is in this social forum?',
         'How well-written do you think this question is?'
     ],
     choices: [
