@@ -1,3 +1,4 @@
+/* PARTICIPANT JUDGEMENTS */
 var judgments = Object.freeze({
     questions: [
         'How curious are you about the answer to this question?',
@@ -16,7 +17,6 @@ var judgments = Object.freeze({
 });
 
 /* SURVEY QUESTIONS */
-
 var questions = {
     groupA: [
         "Why do you feel sick and not hungry when you haven't eaten?",
@@ -38,7 +38,7 @@ var questions = {
     ]
 };
 
-
+/* CONSTANTS */
 var HIGH_SCORES = 3365,
     LOW_SCORES = 33,
     STDEV = 10;
@@ -100,7 +100,6 @@ function assignScores(questions) {
     
     return jsPsych.randomization.shuffle(grouped);
 }
-
 
 /* SURVEY BLOCKS */
 var converter = new showdown.Converter();
