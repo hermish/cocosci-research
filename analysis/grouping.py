@@ -1,18 +1,27 @@
+import pandas as pd
+
+CONCRETE = '../private/supplementary/word-database.csv'
+concrete_file = pd.read_csv(CONCRETE)
+DATABASE = dict(zip(concrete_file['Word'], concrete_file['Conc.M']))
+
+
 def question_type(text):
     """
     :param text: (str) a string representing a question
     :return: (str) a naive classification of the question type, looking for
         key question words
     """
-    if 'how' in text or 'How' in text:
+    text = text.lower()
+    if 'how' in text:
         return 'How'
-    if 'why' in text or 'Why' in text:
+    elif 'why' in text:
         return 'Why'
-    if 'what' in text or 'What' in text:
+    elif 'what' in text:
         return 'What'
-    if 'when' in text or 'When' in text:
+    elif 'when' in text:
         return 'When'
     return ''
+
 
 def has_negation(text):
     """
@@ -25,6 +34,7 @@ def has_negation(text):
         if signal in text:
             return 'Negative'
     return 'Positive'
+
 
 def concrete_score(text):
     """
@@ -39,11 +49,12 @@ def concrete_score(text):
             total += DATABASE[word]
     return total
 
+
 def concrete_score_avg(text):
     """
     :param text: (str) a string representing a question
-    :return: (int) the average of the concreteness scores of each word found in the
-        concreteness database
+    :return: (int) the average of the concreteness scores of each word found in
+        the concreteness database
     """
     words = text.split()
     total, number = 0, 0
@@ -53,12 +64,14 @@ def concrete_score_avg(text):
             number += 1
     return total / number if number else 0
 
-def is_viral(score):
+
+def is_viral(score, threshold):
     """
     :param score: (int) the score or a particular post or submission
+    :param threshold (int) the threshold that seperates not viral
     :return: (int) classifies the post as either viral or not, given that
         VIRAL_THRESHOLD is previously set, likely basede on 
     """
-    if score > VIRAL_THRESHOLD:
+    if score > threshold:
         return 1
     return 0

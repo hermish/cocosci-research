@@ -1,5 +1,6 @@
 import pprint
 
+
 def compose(outer, inner):
     """
     :param outer: (func) the outer function, which much take exactly one
@@ -56,6 +57,8 @@ def head(lst, num=6, out=False):
     :param num: (int) the number of elements to display, set as 6 if not
         specified, but defaults to the entire list if num is greater then the
         length
+    :param out: (bool) whether or not the sublist that is printed should also
+        returned
     :return: [obj] print and returns the first n elements of the list if out
         is set to True, otherwise returns None
     """
@@ -71,6 +74,8 @@ def tail(lst, num=6, out=False):
     :param num: (int) the number of elements to display, set as 6 if not
         specified, but defaults to the entire list if num is greater then the
         length
+    :param out: (bool) whether or not the sublist that is printed should also
+        returned
     :return: [obj] print and returns the last n elements of the list if out
         is set to True, otherwise returns None
     """
