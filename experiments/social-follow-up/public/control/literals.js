@@ -66,7 +66,14 @@ var thankYouMessage = [
     'Please copy and paste this code in the box of the HIT page for the payment to process.'
 ];
 
+var choosePage = [
+    '# View Answers\n',
+    'If you could see the answers for five of these questions, which would they be? Please select exactly five ' +
+    'questions to see the responses to, otherwise the page will not let you submit.\n'
+]
+
 consentPage = consentPage.join('\n');
 consentFailureMessage = consentFailureMessage.join('\n');
 instructions = instructions.join('\n');
 thankYouMessage = thankYouMessage.join('\n');
+choosePage = choosePage.join('\n');
