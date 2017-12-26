@@ -19,21 +19,17 @@ var judgments = Object.freeze({
 /* SURVEY QUESTIONS */
 var questions = {
     groupA: [
-        "Why do you feel sick and not hungry when you haven't eaten?",
-        "How does sleep restore the body's energy?",
-        'Why waves? All energy transfer in nature from one point to another happens in waves. Light, sound, even ' +
-            'gravity travels in waves. Which fundamental property of nature is responsible for wave-like nature? ' +
-            'Are there other non-wave-like ways to transfer energy from one point to another?',
-        'How do activated carbon filters work?',
-        'Why must a country "declare war" before attacking?'
+        'Do multivitamins and Omega-3 pills actually do anything? or is it more of a placebo-type thing?',
+        "What happens that makes beer taste terrible after warming up and then re-chilling? What makes beer 'skunky'?",
+        "Why do some alcoholics suffer life threatening withdrawl symptoms when others with the same drinking habits don't when they quit?",
+        "In cartoons, certain clothing patterns such as checkered or plaid, it seems like it's a static pattern that the characters move around on. Why is this, and how is it done?",
+        'Why are bubbles round?'
     ],
     groupB: [
-        'Why are bubbles round?',
-        'How is research carried out in order to constantly develop and improve CPUs and GPUs?',
-        'What are the biological advantages and disadvantages of trees shedding their leaves vs keeping them ' +
-            'all year round (deciduous vs coniferous)?',
-        'How do such small doses of things like cocaine and heroin kill you? How do these small powders have such ' +
-            'a big effect on your body?',
-        'Why does the eastern half of the United States have colder winters than the western half?',
+        'How do activated carbon filters work?',
+        "How do breeders ensure diversity among their animals' offspring? Wouldn't they have to constantly buy new breeding pairs?",
+        'How can alcohol withdrawal or detox kill you?',
+        "What gives something it's taste? Does pyrite taste like table salt because they are both cubes?",
+        'How does the Federal Reserve figure out how much money to print/mint each year?'
     ]
 };

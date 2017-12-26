@@ -53,7 +53,7 @@ var consentFailureMessage = [
     'the experiment.\n'
 ];
 
-var instructions = [
+var instructionsOne = [
     '# Instructions\n',
     'On the following pages, you will see 10 questions that people have asked on a popular online forum. For each ' +
     'question, we will ask you to make a series of judgments. Please press the next button below or the arrow key ' +
@@ -66,14 +66,22 @@ var thankYouMessage = [
     'Please copy and paste this code in the box of the HIT page for the payment to process.'
 ];
 
-var choosePage = [
-    '# View Answers\n',
-    'If you could see the answers for five of these questions, which would they be? Please select exactly five ' +
-    'questions to see the responses to, otherwise the page will not let you submit.\n'
+var instructionsTwo = [
+    '# Instructions\n',
+    'On the next page, you will be asked select questions of the ten you have that presented with. If you could see ' +
+    'the answers for five of these questions, which five would they be?  Please select exactly *five* questions to ' +
+    'see answers for, otherwise the page will not let you submit. Please press the next button below or the arrow ' +
+    'key to proceed.\n'
 ]
+
+var choosePage = [
+    '### Your responses\n',
+    '_Please remeber to select exactly **five** questions you would like to see the answers to._'
+];
 
 consentPage = consentPage.join('\n');
 consentFailureMessage = consentFailureMessage.join('\n');
-instructions = instructions.join('\n');
+instructionsOne = instructionsOne.join('\n');
 thankYouMessage = thankYouMessage.join('\n');
+instructionsTwo = instructionsTwo.join('\n');
 choosePage = choosePage.join('\n');

@@ -85,7 +85,7 @@ var consentBlock = {
 // Displays intructions
 var instructionsBlock = {
     type: 'instructions',
-    pages: [converter.makeHtml(instructions)],
+    pages: [converter.makeHtml(instructionsOne)],
     show_clickable_nav: true
 };
 
@@ -118,12 +118,19 @@ for (var pos = 0; pos < questionScores.length; pos++) {
 }
 
 // PHASE II
-// Prompt users for 5 question to see resposnes for
+// Display instructions.
+var instructionsTwoBlock = {
+    type: 'instructions',
+    pages: [converter.makeHtml(instructionsTwo)],
+    show_clickable_nav: true
+};
+
+// Prompt users for 5 question to see responses for
 var chooseBlock = {
     preamble: [converter.makeHtml(choosePage)],
     type: 'survey-multi-choose',
+    limit: 5,
     randomize_order: false,
-    horizontal: true,
     required: [true, true, true, true, true],
     options: ['Reveal Answer', 'Keep Hidden'],
     questions: []
@@ -132,7 +139,8 @@ var chooseBlock = {
 for (var pos = 0; pos < questionScores.length; pos++) {
     var questionText = questionScores[pos][0];
     var questionScore = questionScores[pos][1];
-    var text = questionText + '[' questionScore.toString() + 'people upvoted this question]';
+    var text = questionText + ' [' + questionScore.toString() + 
+        ' people upvoted this question]';
     chooseBlock.questions.push(text)
 }
 
@@ -149,13 +157,11 @@ var bufferBlock = {
             alert("A problem occurred while writing to the database.");
             window.location.href = "/";
         })
+    },
+    on_finish: function(data) {
+        // Displays Thank You and payement information
+        jsPsych.endExperiment(converter.makeHtml(thankYouMessage));
     }
-};
-
-var thankYouBlock = {
-    type: 'text',
-    text: converter.makeHtml(thankYouMessage),
-    cont_key: ['/']
 };
 
 /* RUN EXPERIMENT */
@@ -163,9 +169,9 @@ var timeline = [
     consentBlock,
     instructionsBlock,
     judgementBlock,
+    instructionsTwoBlock,
     chooseBlock,
-    bufferBlock,
-    thankYouBlock
+    bufferBlock
 ];
 
 jsPsych.init({

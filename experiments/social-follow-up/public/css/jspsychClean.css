@@ -341,6 +341,9 @@ input[type="text"] {
 
 .jspsych-survey-multi-choice-option {
     line-height: 2;
+    line-height: 1.1em;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
 }
 .jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option {
     display: inline-block;
