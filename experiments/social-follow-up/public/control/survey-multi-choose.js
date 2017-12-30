@@ -158,6 +158,7 @@ jsPsych.plugins['survey-multi-choose'] = (function() {
         // MODIFICATION 4:
         // Alert users if they don't select ea
         alert('You selected ' + positive.toString() + 
+        	// Makes sure it's singular/plural :)
           (positive === 1 ? ' question' : ' questions') +
           ', not ' + trial.limit.toString() + '!')
       }

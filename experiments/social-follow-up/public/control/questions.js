@@ -1,45 +1,49 @@
 /* PARTICIPANT JUDGEMENTS */
 var judgments = Object.freeze({
-    questions: [
-        'How curious are you about the answer to this question?',
-        'How confident are you that you know the correct answer to this question?',
-        'To what extent would knowing the answer to this question be useful to you in the future?',
-        'How popular do you think this question is in this social forum?',
-        'How well-written do you think this question is?'
-    ],
-    choices: [
-        ['not curious at all', '', '', '', '', '', 'very curious'],
-        ['not confident at all', '', '', '', '', '', 'very confident'],
-        ['not useful at all', '', '', '', '', '', 'very useful'],
-        ['not at all', '', '', '', '', '', 'very popular'],
-        ['not at all', '', '', '', '', '',  'very well-written']
-    ]
+	questions: [
+		'How curious are you about the answer to this question?',
+		'How confident are you that you know the correct answer to this question?',
+		'To what extent would knowing the answer to this question be useful to you in the future?',
+		'How popular do you think this question is in this social forum?',
+		'How well-written do you think this question is?'
+	],
+	choices: [
+		['not curious at all', '', '', '', '', '', 'very curious'],
+		['not confident at all', '', '', '', '', '', 'very confident'],
+		['not useful at all', '', '', '', '', '', 'very useful'],
+		['not at all', '', '', '', '', '', 'very popular'],
+		['not at all', '', '', '', '', '',  'very well-written']
+	]
 });
 
 /* SURVEY QUESTIONS */
 var questionsAndAnswers = {
-    questions: [
-        'Do multivitamins and Omega-3 pills actually do anything? or is it more of a placebo-type thing?',
-        "What happens that makes beer taste terrible after warming up and then re-chilling? What makes beer 'skunky'?",
-        "Why do some alcoholics suffer life threatening withdrawl symptoms when others with the same drinking habits don't when they quit?",
-        "In cartoons, certain clothing patterns such as checkered or plaid, it seems like it's a static pattern that the characters move around on. Why is this, and how is it done?",
-        'Why are bubbles round?',
-        'How do activated carbon filters work?',
-        "How do breeders ensure diversity among their animals' offspring? Wouldn't they have to constantly buy new breeding pairs?",
-        'How can alcohol withdrawal or detox kill you?',
-        "What gives something it's taste? Does pyrite taste like table salt because they are both cubes?",
-        'How does the Federal Reserve figure out how much money to print/mint each year?'
-    ],
-    answers: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10'
-    ]
+	questions: [
+		// Group A
+		'Why do your eyelids get puffy after crying?',
+		"Why aren't other animals as freaked out by bugs and creepy crawlies as humans?",
+		"Why do some alcoholics suffer life threatening withdrawl symptoms while others with the same drinking habits don't when they quit?",
+		'How do scientists know what the global temperature was millions of years ago?',
+		'Why is the consistency of my ice cream different when it melts and I refreeze it?',
+		// Group B
+		'How does the body separates water from stomach acid?',
+		'Why is CPR for drowning different than CPR for people who collapse from heart problems? (e.g rescue breaths are recommended for one but not the other)',
+		"What make some objects 'bouncier' than others?",
+		"What gives something it's taste? Does pyrite taste like table salt because they are both cubes?",
+		'Why do typical spray pump bottles of cologne or perfume evaporate quickly when left on their side or "tipped over," but not while upright?'
+	],
+	answers: [
+		// Group A
+		'There are a number of factors.\nTears from strong emotions are less salty than regular tears which keep your eyeball moist. Since your eyelids are \"more salty\" than the tears, the water from your tears goes into your eyelid tissue to balance out the amount of salt, causing the eyelid to swell.\nYou could also say that blood vessels around the eyelid have to expand in order to be able to deliver that much fluid for waterworks. Also, rubbing your eyes can cause it to swell, as the friction can cause irritation of the membranes around your eyes (conjunctiva).',
+		'Fear is generally a learned response in humans rather than being present from birth. Whenever a human is observing another human as being a role model, the observer sees the response taken by the role model, and is more likely to recreate that response in the future. Because of this, it\'s easy to pass on your fear of bugs to another person, as long as that person\'s subconscious processing thinks you are worth learning from.\nOn the other hand, some fears are present from birth as a defensive response to tell an animal to run away when presented with a dangerous situation. Most animals don\'t fear bugs simply because bugs don\'t do anything to the animal. But if you put a cucumber behind a cat while it\'s eating, it will panic and run away because it is born with a fear of snakes, and the cat\'s innate processing mistakes the cucumber for a threat.\nIt\'s likely that our original fear of bugs did come from the knowledge that certain bugs can have bad or even deadly effects on us, which then spread the mentality that we should be afraid of all bugs. For an animal to fear that same bug, it would have to be because of a survival instinct, unless the animal somehow also learned to fear bugs.',
+		'Everyone is effect differently by alcohol due to age, weight, genetics, etc. With chronic alcohol abuse, parts of the nervous system adapt to functioning in the presence of alcohol (aka. tolerance). When the nerves are highly adapted to alcohol, removing it can drastically alter the function of that system, leading so side effects depending on what nerves adapted and how much they adapted.\nThe damage that quick alcohol withdrawal varies a lot and can be permanent, for example parts of the brain can die due to a sudden increase in intracellular calcium (not ELI5 but I think its an interesting mechanism.',
+		'Basically they use a bunch of methods to estimate what the temps must have been like. They measure ocean sediment composition, ice core samples, pollen samples, tree rings, fossilized leaves etc.\nOcean sediments contain different levels of oxygen and different isotopes of oxygen (for example when there is more of a heavier oxygen isotope present it generally means a warmer climate).\nDifferent layers of ice cores have different chemical compositions (including oxygen isotopes), which helps piece together what gases were in the atmospshere, and ultimately the temperatures.\nThe pollen, tree rings, and leaves contain indicators on how the plants did (how well they survived) at certain times\/years which would be due to the different climates\/weather conditions, including temperature.',
+		'Ice cream isn\'t just frozen. It\'s frozen while being churned. This gives it a fluffier consistency, filed with air pockets. You\'d have to refreeze the ice cream while keeping it moving. While at rest, it freezes solid.',
+		// Group B
+		'Yes, when you drink water it just mixes in with the stomach acid.\nYou can think of stomach acid as regular old water that has tiny little lightning bolts floating around in it. These tiny lightning bolts go around blowing apart the food that you eat into tinier and tinier pieces. Your stomach is protected by a layer of snot so that it doesn\'t get blown up. Eventually the food specks are so tiny that they can be absorbed right into your blood. The food slurry is then sucked into your intestine. The intestine has less snot to protect it, so your liver releases a special lightning-absorbing liquid that makes all the bolts strike out at once, producing a safe, nutritious slurry that\'s ready for further breakdown and absorption. After all of the nutrients are absorbed, your intestine then absorbs all of the safe lightning-free water and recycles it.',
+		'When you drown, you\'re drastically decreasing the available oxygen in your body\/lungs as it all gets spent as you suffocate. When you collapse from heart problems, you tend to have available oxygen still in your lungs, as well as in your blood, so the priority of CPR is to circulate the blood until emergency response gets there. Sometimes pausing and taking a breath burdens the effectiveness of the CPR, but it could be necessary in someone who drowns (or else you\'re circulating spent blood). So if there is oxygenated blood in the body already then breathing can do more harm by pausing CPR compressions\n',
+		'The scientific name for \'bounciness\' is the coefficient of restitution.\nIt\'s influenced by two main things; how much an object deforms when it hits something, and how much energy it loses in that process.\nSomething very hard like a rock, loses lots of energy when it deforms but is very hard so overall can seem \'bouncy\'.\nA superball deforms a lot (relatively) when it hits something but doesn\'t lose much energy, so is also very \'bouncy\'.\nWhat influences how much energy something loses during impact is a much more complicated question.',
+		'Your tongue is covered with 2 types of taste proteins, receptors and ion channels, each of which have multiple subtypes.\nThe receptors have a pocket into which only certain molecules can fit, and when the receptor pocket interacts with one of these molecules, it is activated. The activated receptor then sends a signal into the cell that it is attached to, which gets translated into an electrical signal that moves to the brain, where it is interpreted as a taste.\nIon channels are similar, in that they send an electrical signal to the brain, but instead, these proteins just allow specific molecules to enter the cell which then activates the electrical signal.\nSweet, umami, and bitter use the receptors, salty and sour use the ion channels.\nThe important part is that each type of protein is VERY specific, meaning that they will only react to molecules that share similar chemical or physical properties. But as long as the receptor or channel is functioning, they will send the same signal to your brain. So, for example, if you eat white sugar or if you eat an apple, the type of sugar in each is different (glucose vs fructose), but they are both picked up by the same sweet receptor and so both of them will activate a sweet signal in your brain.\nSo pyrite tastes like table salt (who is eating pyrite?!) because they both work through the same channel proteins, and send the same flavor signal to the brain\nWhat tends to give something its taste is that any given food releases multiple molecules which can be picked up by a combination of different receptors\/channels',
+		'So there\'s actually a decent amount of things going on here, and an understanding of equilibrium is somewhat required...\nFirst, we will assume a near perfect seal on the lid, but it is impossible to assume a perfect seal entirely around the top of the perfume bottle because there has to be a hole for you to spray the liquid perfume out of. This hole is where you\'ll lose most of the perfume\nOne thing you\'ll need to understand here is vapor pressure. This is the pressure exerted from your liquid perfume onto the gas around it. In a closed container, the pressure around the liquid and the vapor pressure from the liquid will eventually be equal, this is called equilibrium (side note, when a vapor pressure is higher than the surrounding gases pressure, you will see any liquid evaporate).\nNow, there is a tiny tube sticking down into the liquid perfume, which separates our perfume bottle from the outside air. This is very important with things like perfume, because they have a very high vapor pressure, which makes them evaporate and is actually why you can smell them distinctly.\nThe tube that has been developed is actually a very clever way to keep the perfume inside the bottle. When it is in the liquid it creates surface tension that actually creates an effect that prevents the the liquid from evaporating. Pretty cool right? However, this surface tension only works when the area of the surface of the liquid (surface area) making contact with another gas is very low. But since this isn\'t a perfect solution, the tube also creates a much smaller surface area for the liquid to evaporate from.\nWhen the bottle is on its side, the surface area gets turned on its side, which is too much surface area for the surface tension to make a dent in this evaporation, when the liquid is actually in the tube. This isn\'t always the case though... sometimes the tube sticks up into the gas, and there\'s no surface tension at all!\nSo with the bottle on its side, the seal created by the tube is no longer effective, and more evaporation happens.\nTL;DR: The fast way to explain this is the liquid is no longer in equilibrium with the gas inside the bottle, but rather the air you breathe, which is impossible for a 1L bottle to achieve and thus evaporates completely.'
+	]
 };
