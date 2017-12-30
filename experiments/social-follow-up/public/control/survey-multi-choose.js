@@ -154,6 +154,12 @@ jsPsych.plugins['survey-multi-choose'] = (function() {
 
         // next trial
         jsPsych.finishTrial(trial_data);
+      } else {
+        // MODIFICATION 4:
+        // Alert users if they don't select ea
+        alert('You selected ' + positive.toString() + 
+          (positive === 1 ? ' question' : ' questions') +
+          ', not ' + trial.limit.toString() + '!')
       }
     });
 

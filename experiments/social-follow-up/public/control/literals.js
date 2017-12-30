@@ -1,4 +1,13 @@
-var consentPage = [
+var literals = {
+    consentPage: null,
+    consentFailureMessage: null,
+    instructionsOne: null,
+    thankYouMessage: null,
+    instructionsTwo: null,
+    choosePage: ''
+};
+
+literals.consentPage = [
     '# Consent to Participate in Research\n',
     '`CPHS# 2013-09-5632`',
     '## Overview\n',
@@ -44,44 +53,37 @@ var consentPage = [
     'By selecting the \'consent\' option below, I acknowledge that I am 18 or older, that I am a fluent speaker of ' +
     'English, that I have not completed this experiment before, that I have read this consent form, and that I ' +
     'agree to take part in the research.'
-];
+].join('\n');
 
-var consentFailureMessage = [
+literals.consentFailureMessage = [
     '# Thank you!\n',
     'As you do not consent to participate, please close this window and return this HIT on MTurk so that another ' +
     'worker can accept it. If you selected this option by mistake, you can change your response and continue with ' +
     'the experiment.\n'
-];
+].join('\n');
 
-var instructionsOne = [
+literals.instructionsOne = [
     '# Instructions\n',
     'On the following pages, you will see 10 questions that people have asked on a popular online forum. For each ' +
     'question, we will ask you to make a series of judgments. Please press the next button below or the arrow key ' +
     'to proceed.\n'
-];
+].join('\n');
 
-var thankYouMessage = [
+literals.thankYouMessage = [
     '# Thank you!\n',
     'The survey is now complete, thank you for your participatation. Here is your unique SECRET key: AJFHBG897. ' +
     'Please copy and paste this code in the box of the HIT page for the payment to process.'
-];
+].join('\n');
 
-var instructionsTwo = [
+literals.instructionsTwo = [
     '# Instructions\n',
     'On the next page, you will be asked select questions of the ten you have that presented with. If you could see ' +
     'the answers for five of these questions, which five would they be?  Please select exactly *five* questions to ' +
     'see answers for, otherwise the page will not let you submit. Please press the next button below or the arrow ' +
     'key to proceed.\n'
-]
+].join('\n')
 
-var choosePage = [
+literals.choosePage = [
     '### Your responses\n',
     '_Please remeber to select exactly **five** questions you would like to see the answers to._'
-];
-
-consentPage = consentPage.join('\n');
-consentFailureMessage = consentFailureMessage.join('\n');
-instructionsOne = instructionsOne.join('\n');
-thankYouMessage = thankYouMessage.join('\n');
-instructionsTwo = instructionsTwo.join('\n');
-choosePage = choosePage.join('\n');
+].join('\n');
