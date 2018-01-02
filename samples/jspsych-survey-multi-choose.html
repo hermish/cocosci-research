@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../experiments/social-follow-up/jsPsych/jspsych.js"></script>
+    <script src="../experiments/social-follow-up/public/control/survey-multi-choose.js"></script>
+    <link href="../experiments/social-follow-up/public/css/jspsychClean.css" rel="stylesheet" type="text/css"></link>
+  </head>
+  <body>
+    <div id="jspsych-target"></div>
+  </body>
+  <script>
+
+  // defining groups of questions that will go together.
+  var page_1_questions = ["I like vegetables.", "I like fruit."]
+
+  // definiting two different response scales that can be used.
+  var page_1_options = ['Yes', 'No'];
+
+  var multi_choice_block = {
+      type: 'survey-multi-choose',
+      limit: 1,
+      questions: page_1_questions,
+      horizontal: false,
+      options: page_1_options,  // need one scale for every question on a page
+      required: [true, false]   // set whether questions are required
+      // horizontal: true  // centres questions and makes options display horizontally
+  };
+
+  jsPsych.init({
+    display_element: $('#jspsych-target'),
+    timeline: [multi_choice_block],
+    on_finish: function() {
+      jsPsych.data.displayData();
+    }
+  });
+
+
+  </script>
+</html>
