@@ -1,6 +1,6 @@
 # Cocosci Research
-Some work relating to computational cognitive science and the University of 
-California, Berkeley
+Some work I am doing at the computational cognitive science lab at the University of California,
+Berkeley
 
 ## Selected Project Structure
 - Analysis
