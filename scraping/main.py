@@ -2,7 +2,7 @@ from utilities import read_credentials, scrape_data, write_json_file
 from extractors import get_posts_alt
 
 FILE_NAME = '../private/credentials/reddit.txt'
-OUTPUT = '../private/output/2018-01-24.txt'
+OUTPUT = '../private/output/2018-02-01.txt'
 
 # EXTRACTOR
 OPTIONS = {'subreddits': ['explainlikeimfive'],
