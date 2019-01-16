@@ -1,0 +1,11 @@
+var literals = {};
+literals.consentPageText = 'consentPageText';
+literals.noConsentText = 'noConsentText';
+literals.generalInstructionsText = 'generalInstructionsText';
+literals.puzzleText = 'puzzleText';
+literals.puzzlePromptText = 'puzzlePromptText';
+literals.preHintText = 'preHintText';
+literals.hintText = 'hintText';
+literals.askAnswerPreamble = 'askAnswerPreamble';
+literals.likertPreamble = 'likertPreamble'
+literals.thankYouText = 'thankYouText';
