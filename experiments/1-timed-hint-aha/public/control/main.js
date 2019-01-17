@@ -22,11 +22,11 @@ main.identifier = {
 };
 main.paramters = {
     postInstructionsPause: 0,
-    controlPuzzleTime: 2500,
-    controlHintTime: 1000,
-    experimentalPuzzleTime: 2000,
-    experimentalPreHintTime: 500,
-    experimentalHintTime: 1000
+    controlPuzzleTime: 25000,
+    controlHintTime: 10000,
+    experimentalPuzzleTime: 20000,
+    experimentalPreHintTime: 5000,
+    experimentalHintTime: 10000
 };
 
 
