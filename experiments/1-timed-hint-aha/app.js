@@ -39,6 +39,6 @@ app.post('/experiment-data', function (request, response) {
 });
 
 // Start Server
-var server = app.listen(process.env.PORT, function () {
+var server = app.listen(3000, function () { //process.env.PORT
     console.log("Listening on port %d", server.address().port);
 });

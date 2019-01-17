@@ -33,7 +33,7 @@ main.paramters = {
 /* TIMELINE ELEMENTS */
 // Introduction
 main.blocks = {};
-main.blocks.consentPage = {
+main.blocks.consentPage = { //Link the consent page here
     type: 'survey-multi-choice',
     preamble: main.converter.makeHtml(literals.consentPage),
     questions: [
@@ -152,12 +152,12 @@ main.blocks.surveyData = {
     preamble: main.converter.makeHtml(literals.surveyDataPage),
     questions: [
         {
-            prompt: 'How confident were you initially?',
-            labels: ['No', '', '', '', '', '', 'Yes'],
+            prompt: 'Please rate how you felt once you understood the solution to the riddle.',
+            labels: ['Unplesant', '', '', '', '', '', 'Pleasant'],
             required: true
         },
         {
-            prompt: 'Did you experience an Aha! Moment?',
+            prompt: 'An Aha! moment is when the solution suddenly dawns on you and everything is clear immediately. In a flash. As an example, imagine a light bulb that is switched on all at once in contrast to slowly turning up the lights. Did you experience an Aha! moment upon getting the solution to this puzzle? ',
             labels: ['No', '', '', '', '', '', 'Yes'],
             required: true
         }
@@ -193,8 +193,8 @@ jsPsych.init({
             main.blocks.controlTrials :
             main.blocks.experimentalTrials,
 
-        main.blocks.riddleFeedback,
-        main.blocks.answerDescription,
+        //main.blocks.riddleFeedback,
+        //main.blocks.answerDescription,
         main.blocks.surveyData,
         main.blocks.finalDataBuffer
     ]
