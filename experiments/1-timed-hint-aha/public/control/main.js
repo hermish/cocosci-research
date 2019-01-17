@@ -33,6 +33,7 @@ main.paramters = {
 /* TIMELINE ELEMENTS */
 // Introduction
 main.blocks = {};
+
 main.blocks.consentPage = { //Link the consent page here
     type: 'survey-multi-choice',
     preamble: main.converter.makeHtml(literals.consentPage),
