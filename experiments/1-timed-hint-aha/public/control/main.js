@@ -2,16 +2,15 @@
 var main = {
     converter: new showdown.Converter(),
     writeExperimentData: function(input) {
-        console.log(input);
-        // $.ajax({
-        //     type: "POST",
-        //     url: "/experiment-data",
-        //     data: input,
-        //     contentType: "application/json"
-        // }).fail(function() {
-        //     alert("Error! Please contact the researcher.");
-        //     window.location.href = "/";
-        // })
+        $.ajax({
+            type: "POST",
+            url: "/experiment-data",
+            data: input,
+            contentType: "application/json"
+        }).fail(function() {
+            alert("Error! Please contact the researcher.");
+            window.location.href = "/";
+        })
     }
 };
 
@@ -58,7 +57,6 @@ main.blocks.consentPage = {
 main.blocks.initialDataBuffer = {
     type: 'call-function',
     func: function () {
-        console.log('first');
         main.writeExperimentData(JSON.stringify({
             responseType: 'start',
             participantID: main.identifier.participantID,
