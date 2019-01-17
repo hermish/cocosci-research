@@ -1,19 +1,20 @@
-var main = {};
-
 /* INITIALIZATION */
-main.converter = new showdown.Converter();
-main.writeExperimentData = function(input) {
-    console.log(input);
-    // $.ajax({
-    //     type: "POST",
-    //     url: "/experiment-data",
-    //     data: input,
-    //     contentType: "application/json"
-    // }).fail(function() {
-    //     alert("Error! Please contact the researcher.");
-    //     window.location.href = "/";
-    // })
+var main = {
+    converter: new showdown.Converter(),
+    writeExperimentData: function(input) {
+        console.log(input);
+        // $.ajax({
+        //     type: "POST",
+        //     url: "/experiment-data",
+        //     data: input,
+        //     contentType: "application/json"
+        // }).fail(function() {
+        //     alert("Error! Please contact the researcher.");
+        //     window.location.href = "/";
+        // })
+    }
 };
+
 
 /* VARIABLES & PARAMETERS */
 main.identifier = {
@@ -22,18 +23,20 @@ main.identifier = {
 };
 main.paramters = {
     postInstructionsPause: 0,
-    timeToHint: 5000,
-    preHintTime: 3000,
-    hintTime: 10000
+    controlPuzzleTime: 2500,
+    controlHintTime: 1000,
+    experimentalPuzzleTime: 2000,
+    experimentalPreHintTime: 500,
+    experimentalHintTime: 1000
 };
 
-/* TIMELINE ELEMENTS */
 
+/* TIMELINE ELEMENTS */
 // Introduction
 main.blocks = {};
-main.blocks.constentPage = {
+main.blocks.consentPage = {
     type: 'survey-multi-choice',
-    preamble: main.converter.makeHtml(literals.consentPageText),
+    preamble: main.converter.makeHtml(literals.consentPage),
     questions: [
         {
             prompt: 'Do you consent to participate?',
@@ -47,7 +50,7 @@ main.blocks.constentPage = {
     on_finish: function(data) {
         var responses = JSON.parse(data.responses);
         if (responses.Q0.includes('not')) {
-            jsPsych.endExperiment(main.converter.makeHtml(literals.noConsentText));
+            jsPsych.endExperiment(main.converter.makeHtml(literals.noConsentPage));
         }
     }
 };
@@ -66,90 +69,103 @@ main.blocks.initialDataBuffer = {
 
 main.blocks.generalInstructions = {
     type: 'instructions',
-    pages: [main.converter.makeHtml(literals.generalInstructionsText)],
+    pages: [main.converter.makeHtml(literals.generalInstructionsPage)],
     show_clickable_nav: true,
     button_label_next: 'Continue',
     post_trial_gap: main.paramters.postInstructionsPause
 };
 
-// Puzzle Presentation
-main.blocks.puzzlePresentation = {
-    type: 'html-button-response',
-    stimulus: main.converter.makeHtml(literals.puzzleText),
-    prompt: literals.puzzlePromptText,
-    choices: ['Got It!'],
-    trial_duration: main.paramters.timeToHint,
-
-    // Terminate if completed early
-    on_finish: function(data) {
-        var response = data.button_pressed;
-        if (response !== null) {
-            console.log('completedEarly');
-            main.writeExperimentData(JSON.stringify({
-                responseType: 'completedEarly',
-                participantID: main.identifier.participantID,
-                conditionNumber: main.identifier.conditionNumber
-            }));
-            jsPsych.endExperiment(main.converter.makeHtml(literals.thankYouText));
-        }
-    }
-};
-
-main.blocks.hint = {
-    type: 'html-button-response',
+// Experiment
+main.blocks.controlTrials = {
+    type: 'html-keyboard-response',
+    choices: jsPsych.NO_KEYS,
     timeline: [
         {
-            stimulus: main.converter.makeHtml(literals.hintText),
-            choices: ['Got It!'],
-            trial_duration: main.paramters.hintTime,
-
-            // Terminate if uncompleted
-            on_finish: function(data) {
-                var response = data.button_pressed;
-                if (response === null) {
-                    console.log('uncompleted');
-                    main.writeExperimentData(JSON.stringify({
-                        responseType: 'uncompleted',
-                        participantID: main.identifier.participantID,
-                        conditionNumber: main.identifier.conditionNumber
-                    }));
-                    jsPsych.endExperiment(main.converter.makeHtml(literals.thankYouText));
-                }
-            }
+            stimulus: main.converter.makeHtml(literals.puzzlePage),
+            trial_duration: main.paramters.controlPuzzleTime
+        },
+        {
+            stimulus: main.converter.makeHtml(literals.hintPage),
+            trial_duration: main.paramters.controlHintTime
         }
     ]
 };
 
-if (main.identifier.conditionNumber === 1) {
-    main.blocks.hint.timeline.unshift({
-        stimulus: main.converter.makeHtml(literals.preHintText),
-        choices: [],
-        trial_duration: main.paramters.preHintTime
-    });
-}
-
-main.blocks.askAnswer = {
-    type: 'survey-text',
-    questions: [
+main.blocks.experimentalTrials = {
+    type: 'html-keyboard-response',
+    choices: jsPsych.NO_KEYS,
+    timeline: [
         {
-            prompt: 'Describe the answer in 5 words or less.',
-            columns: 50
+            stimulus: main.converter.makeHtml(literals.puzzlePage),
+            trial_duration: main.paramters.experimentalPuzzleTime
+        },
+        {
+            stimulus: main.converter.makeHtml(literals.preHintPage),
+            trial_duration: main.paramters.experimentalPreHintTime
+        },
+        {
+            stimulus: main.converter.makeHtml(literals.hintPage),
+            trial_duration: main.paramters.experimentalHintTime
         }
-    ],
-    preamble: main.converter.makeHtml(literals.askAnswerPreamble)
+    ]
 };
 
-main.blocks.finalRatings = {
-    type: 'survey-likert',
-    preamble: main.converter.makeHtml(literals.likertPreamble),
+
+// Data Collection
+main.blocks.riddleFeedback = {
+    type: 'survey-multi-choice',
+    preamble: main.converter.makeHtml(literals.riddleFeedbackPage),
     questions: [
         {
-            prompt: 'Aha! Moment?',
+            prompt: 'Did you figure out the riddle?',
+            options: [
+                'Yes',
+                'No'
+            ],
+            required: true
+        }
+    ],
+    on_finish: function(data) {
+        var responses = JSON.parse(data.responses);
+        if (responses.Q0 === 'No') {
+            main.writeExperimentData(JSON.stringify({
+                responseType: 'uncompleted',
+                participantID: main.identifier.participantID,
+                conditionNumber: main.identifier.conditionNumber
+            }));
+            jsPsych.endExperiment(main.converter.makeHtml(literals.thankYouPage));
+        }
+    }
+};
+
+main.blocks.answerDescription = {
+    type: 'survey-text',
+    preamble: main.converter.makeHtml(literals.answerDescriptionPage),
+    questions: [
+        {
+            prompt: 'Please describe the answer in five words or less.',
+            columns: 50
+        }
+    ]
+};
+
+main.blocks.surveyData = {
+    type: 'survey-likert',
+    preamble: main.converter.makeHtml(literals.surveyDataPage),
+    questions: [
+        {
+            prompt: 'How confident were you initially?',
+            labels: ['No', '', '', '', '', '', 'Yes'],
+            required: true
+        },
+        {
+            prompt: 'Did you experience an Aha! Moment?',
             labels: ['No', '', '', '', '', '', 'Yes'],
             required: true
         }
     ]
 };
+
 
 main.blocks.finalDataBuffer = {
     type: 'call-function',
@@ -157,9 +173,10 @@ main.blocks.finalDataBuffer = {
         main.writeExperimentData(jsPsych.data.get().json());
     },
     on_finish: function (data) {
-        jsPsych.endExperiment(main.converter.makeHtml(literals.thankYouText));
+        jsPsych.endExperiment(main.converter.makeHtml(literals.thankYouPage));
     }
 };
+
 
 /* RUN EXPERIMENT */
 jsPsych.data.addProperties({
@@ -170,13 +187,17 @@ jsPsych.data.addProperties({
 
 jsPsych.init({
     timeline: [
-        main.blocks.constentPage,
+        main.blocks.consentPage,
         main.blocks.initialDataBuffer,
         main.blocks.generalInstructions,
-        main.blocks.puzzlePresentation,
-        main.blocks.hint,
-        main.blocks.askAnswer,
-        main.blocks.finalRatings,
+
+        main.identifier.conditionNumber === 0 ?
+            main.blocks.controlTrials :
+            main.blocks.experimentalTrials,
+
+        main.blocks.riddleFeedback,
+        main.blocks.answerDescription,
+        main.blocks.surveyData,
         main.blocks.finalDataBuffer
     ]
 });

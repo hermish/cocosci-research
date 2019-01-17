@@ -1,11 +1,12 @@
 var literals = {};
-literals.consentPageText = 'consentPageText';
-literals.noConsentText = 'noConsentText';
-literals.generalInstructionsText = 'generalInstructionsText';
-literals.puzzleText = 'puzzleText';
-literals.puzzlePromptText = 'puzzlePromptText';
-literals.preHintText = 'preHintText';
-literals.hintText = 'hintText';
-literals.askAnswerPreamble = 'askAnswerPreamble';
-literals.likertPreamble = 'likertPreamble'
-literals.thankYouText = 'thankYouText';
+literals.consentPage = 'consentPage';
+literals.noConsentPage = 'noConsentPage';
+literals.generalInstructionsPage = 'generalInstructionsPage';
+literals.puzzlePage = 'puzzlePage';
+literals.preHintPage = 'preHintPage';
+literals.hintPage = 'hintPage';
+literals.thankYouPage = 'thankYouPage';
+literals.riddleFeedbackPage = 'riddleFeedbackPage';
+literals.answerDescriptionPage = 'answerDescriptionPage';
+literals.surveyDataPage = 'surveyDataPage';
+
