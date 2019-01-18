@@ -16,7 +16,15 @@
         <script src="jspsych-6/plugins/jspsych-survey-text.js"></script>
         <script src="jspsych-6/plugins/jspsych-survey-likert.js"></script>
         <script src="jspsych-6/plugins/jspsych-external-html.js"></script>
-        
+        <script src="control/firstImpression.js"></script>
+        <script src="control/firstImpression.min.js"></script>
+        <script type="text/javascript">
+            function checkDuplicate() {
+                if (!firstImpression()){
+                    window.location.href = "repeat"; //take them to repeat.html page if they are repeating the experiment
+                }
+            }
+        </script>
         <!-- Custom JsPysch Plugins -->
         <!-- Tools -->
         <!-- Constants and Literals -->
@@ -25,6 +33,9 @@
         <link href="jspsych-6/css/jspsych.css" rel="stylesheet" type="text/css"></link>
     </head>
     <body>
+        <script type="text/javascript">
+            checkDuplicate(); //to not allow any duplicate participants
+        </script>
         <!-- App -->
         <script src="control/main.js"></script>
     </body>
