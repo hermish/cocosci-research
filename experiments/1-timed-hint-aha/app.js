@@ -31,6 +31,10 @@ app.get('/', function(request, response) {
     response.render('index.html');
 });
 
+app.get('/repeat', function(request, response) {
+    response.render('repeat.html');
+});
+
 app.post('/experiment-data', function (request, response) {
     Entry.create({
         "data": request.body
