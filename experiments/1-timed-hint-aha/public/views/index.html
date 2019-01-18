@@ -16,17 +16,16 @@
         <script src="jspsych-6/plugins/jspsych-survey-text.js"></script>
         <script src="jspsych-6/plugins/jspsych-survey-likert.js"></script>
         <script src="jspsych-6/plugins/jspsych-external-html.js"></script>
+        <!-- Custom JsPysch Plugins -->
         <script src="control/firstImpression.js"></script>
-        <script src="control/firstImpression.min.js"></script>
         <script type="text/javascript">
             function checkDuplicate() {
                 if (!firstImpression()){
-                    window.location.href = "repeat"; //take them to repeat.html page if they are repeating the experiment
+                    // take them to repeat.html page if they are repeating the experiment
+                    window.location.href = "repeat";
                 }
             }
         </script>
-        <!-- Custom JsPysch Plugins -->
-        <!-- Tools -->
         <!-- Constants and Literals -->
         <script src="control/literals.js"></script>
         <!-- Styling and recaptcha-->
