@@ -194,8 +194,8 @@ jsPsych.init({
             main.blocks.controlTrials :
             main.blocks.experimentalTrials,
 
-        // main.blocks.riddleFeedback,
-        // main.blocks.answerDescription,
+        //main.blocks.riddleFeedback,
+        //main.blocks.answerDescription,
         main.blocks.surveyData,
         main.blocks.finalDataBuffer
     ]

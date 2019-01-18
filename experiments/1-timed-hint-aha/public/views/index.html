@@ -16,32 +16,27 @@
         <script src="jspsych-6/plugins/jspsych-survey-text.js"></script>
         <script src="jspsych-6/plugins/jspsych-survey-likert.js"></script>
         <script src="jspsych-6/plugins/jspsych-external-html.js"></script>
-        <!-- Custom JsPysch Plugins -->
-        <script src="control/firstImpression.min.js"></script>
         <script src="control/firstImpression.js"></script>
+        <script src="control/firstImpression.min.js"></script>
         <script type="text/javascript">
             function checkDuplicate() {
                 if (!firstImpression()){
-                    // take them to repeat.html page if they are repeating the experiment
-                    window.location.href = "repeat";
+                    window.location.href = "repeat"; //take them to repeat.html page if they are repeating the experiment
                 }
             }
         </script>
+        <!-- Custom JsPysch Plugins -->
+        <!-- Tools -->
         <!-- Constants and Literals -->
         <script src="control/literals.js"></script>
-        <!-- Styling and recaptcha-->
+        <!-- Styling-->
         <link href="jspsych-6/css/jspsych.css" rel="stylesheet" type="text/css"></link>
-        <script src='https://www.google.com/recaptcha/api.js'></script> 
+        
     </head>
     <body>
         <script type="text/javascript">
             checkDuplicate(); //to not allow any duplicate participants
         </script>
-        <form action="?" method="POST">
-            <div class="g-recaptcha" data-sitekey="6Ldxv4oUAAAAACSxXUxfYSk3_TJwpd0JZ1FeIkIm"></div>
-            <br/>
-            <input type="submit" value="Submit">
-        </form>
             
         <script src="control/main.js"></script>
     </body>

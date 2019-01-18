@@ -3,13 +3,11 @@ var express = require('express');
 var mongoose = require('mongoose');
 var body_parser = require('body-parser');
 
-// Instantiate App & Database
+// Instantiate App & Connection
 var app = express();
 var emptySchema = new mongoose.Schema({}, { strict: false });
 var Entry = mongoose.model('Entry', emptySchema);
 
-
-// Connection (Comment when local)
 var location = process.env.CONNECTION;
 mongoose.connect(location);
 var db = mongoose.connection;
@@ -30,6 +28,10 @@ app.set('view engine', 'html');
 
 // Routing
 app.get('/', function(request, response) {
+    response.render('verify.html');
+});
+
+app.get('/index', function(request, response) {
     response.render('index.html');
 });
 
