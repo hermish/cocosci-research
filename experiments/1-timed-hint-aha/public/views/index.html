@@ -29,14 +29,20 @@
         <!-- Tools -->
         <!-- Constants and Literals -->
         <script src="control/literals.js"></script>
-        <!-- Styling -->
+        <!-- Styling and recaptcha-->
         <link href="jspsych-6/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+        <script src='https://www.google.com/recaptcha/api.js'></script> 
     </head>
     <body>
         <script type="text/javascript">
             checkDuplicate(); //to not allow any duplicate participants
         </script>
-        <!-- App -->
+        <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6Ldxv4oUAAAAACSxXUxfYSk3_TJwpd0JZ1FeIkIm"></div>
+            <br/>
+            <input type="submit" value="Submit">
+        </form>
+            
         <script src="control/main.js"></script>
     </body>
 </html>
