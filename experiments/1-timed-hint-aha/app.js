@@ -10,13 +10,13 @@ var Entry = mongoose.model('Entry', emptySchema);
 
 
 // Connection (Comment when local)
-// var location = process.env.CONNECTION;
-// mongoose.connect(location);
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error'));
-// db.once('open', function callback() {
-//     console.log('database opened');
-// });
+var location = process.env.CONNECTION;
+mongoose.connect(location);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', function callback() {
+    console.log('database opened');
+});
 
 // Static Middleware
 app.use(express.static(__dirname + '/public'));
