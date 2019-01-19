@@ -2,7 +2,6 @@
 var main = {
   converter: new showdown.Converter(),
   writeExperimentData: function (input) {
-    console.log(input);
     $.ajax({
       type: "POST",
       url: "/experiment-data",
