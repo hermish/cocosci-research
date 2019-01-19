@@ -5,4 +5,4 @@ literals.generalInstructionsPage = '# Instructions\n\nWelcome to the Experiment.
 literals.puzzlePage =  '> A man walks into a bar and asks the bartender for a glass of water. The bartender reaches under the bar and brings out a gun and aims it at the man. The man says thank you and leaves.\n\n> *What happened?*';
 literals.preHintPage = '> We will now give you a **hint** that will help you get the answer to this puzzle.';
 literals.hintPage = '> Hiccups.';
-literals.thankYouPage =  '# Thank You!\n\nThank you for taking part in our experiment! \n\n*Purpose of our study:* In this study, we hope to understand how and why people experience Aha! moments during problem-solving.';
+literals.thankYouPage =  '# Thank You!\n\nThank you for taking part in our experiment! \n\n Here is your secret code -  *AJFHBG897*. Please put this in the survey box to process your payment. \n\n*Purpose of our study:* In this study, we hope to understand how and why people experience Aha! moments during problem-solving.';
