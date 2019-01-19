@@ -1,0 +1,413 @@
+/*
+ * CSS for jsPsych experiments.
+ *
+ * This stylesheet provides minimal styling to make jsPsych
+ * experiments look polished without any additional styles.
+ *
+ * Edited: Hermish Mehta
+ */
+
+
+/* fonts and type */
+
+@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+body {
+    padding:10% 10% 10%;
+    background-color: #ffffff;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    color: #24292e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+}
+
+code {
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+}
+
+blockquote {
+    padding: 0 0 2em;
+    text-align: center;
+    font-size: 18px;
+    /*color: #6a737d;*/
+    /*border-left: 0.25em solid #dfe2e5;*/
+}
+
+p {
+    clear: both;
+}
+.very-small {
+    font-size: 50%;
+}
+.small {
+    font-size: 75%;
+}
+.large {
+    font-size: 125%;
+}
+.very-large {
+    font-size: 150%;
+}
+
+/* Classes for changing location of things */
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.center-content {
+    text-align: center;
+}
+
+.block-center {
+    margin: 1em auto;
+    display: block;
+}
+/* Form elements like input fields and buttons */
+
+input[type="text"] {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+/* borrowing Bootstrap style for btn elements, but combining styles a bit */
+.jspsych-btn, button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 8px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.jspsych-btn:hover, button:hover {
+    background-color: #ddd;
+    border-color: #aaa;
+}
+
+
+.jspsych-btn:disabled, button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Container holding jsPsych content */
+
+.jspsych-display-element {
+    width: 60%;
+    margin: 50px auto 50px auto;
+}
+
+/* jsPsych progress bar */
+
+#jspsych-progressbar-container {
+    color: #777;
+    border-bottom: 2px solid #dedede;
+    background-color: #ffffff;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 10px 0;
+}
+#jspsych-progressbar-container s {}
+#jspsych-progressbar-outer {
+    background-color: #dedede;
+    border-radius: 5px;
+    padding: 1px;
+    width: 800px;
+    margin: auto;
+}
+#jspsych-progressbar-inner {
+    background-color: #aaa;
+    /* #3EB3D7; */
+    width: 0;
+    height: 1em;
+    border-radius: 5px;
+}
+
+/* PLUGIN: jspsych-animation */
+
+#jspsych-animation-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PLUGIN: jspsych-categorize-animation */
+
+#jspsych-categorize-animation-stimulus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PLUGIN: jspsych-categorize */
+
+#jspsych-categorize-stimulus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.feedback {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PLUGIN: jspsych-free-sort */
+
+#jspsych-free-sort-arena {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #444;
+}
+.jspsych-free-sort-draggable {
+    cursor: move;
+}
+#jspsych-free-sort-done-btn {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
+/* PLUGIN: jspsych-instructions */
+
+.jspsych-instructions-nav {
+    text-align: center;
+    margin-top: 2em;
+}
+.jspsych-instructions-nav button {
+    margin: 20px;
+}
+
+/* PLUGIN: jspsych-multi-stim-multi-response */
+
+#jspsych-multi-stim-multi-response-stimulus {
+    display: block;
+    margin: auto;
+}
+
+/* PLUGIN: jspsych-palmer */
+
+#jspsych-palmer-snapCanvas {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PLUGIN: jspsych-same-different */
+
+.jspsych-same-different-stimulus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PLUGIN: jspsych-single-stim */
+
+#jspsych-single-stim-stimulus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PLUGIN: jspsych-survey-text */
+
+.jspsych-survey-text {
+    margin: 0.25em 0;
+}
+.jspsych-survey-text-question {
+    margin: 2em 0;
+}
+
+/* PLUGIN: jspsych-survey-likert */
+
+.jspsych-survey-likert-statement {
+    display:block;
+    padding-top: 30px;
+    margin-bottom:10px;
+}
+.jspsych-survey-likert-opts {
+    list-style:none;
+    width:100%;
+    margin:0;
+    padding:0 0 35px;
+    display:block;
+    font-size: 14px;
+    line-height:1.1em;
+}
+
+.jspsych-survey-likert-opt-label {
+    line-height: 1.1em;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 11px;
+}
+
+.jspsych-survey-likert-opts:before {
+    content: '';
+    position:relative;
+    top:11px;
+    /*left:9.5%;*/
+    display:block;
+    background-color:#efefef;
+    height:4px;
+    width:100%;
+}
+
+.jspsych-survey-likert-opts:last-of-type {
+    border-bottom: 0;
+}
+
+.jspsych-survey-likert-opts li {
+    display:inline-block;
+    /*width:19%;*/
+    text-align:center;
+    vertical-align: top;
+}
+
+.jspsych-survey-likert-opts li input[type=radio] {
+    display:block;
+    position:relative;
+    top:0;
+    left:50%;
+    margin-left:-6px;
+}
+
+/*
+ *
+ * PLUGIN: jspsych-survey-multi-choice
+ *
+ */
+
+.jspsych-survey-multi-choice-question {
+    margin-top: 2em;
+    margin-bottom: 2em;
+ }
+
+.jspsych-survey-multi-choice-text span.required {
+    color: darkred;
+}
+
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-text {
+    text-align: center;
+}
+
+.jspsych-survey-multi-choice-option {
+    line-height: 1.1em;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+}
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option {
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    vertical-align: top;
+}
+
+label.jspsych-survey-multi-choice-text input[type="radio"] {
+    margin-right: 1em;
+}
+
+#jspsych-survey-multi-choice-next {
+    display: block;
+    margin: auto;
+}
+
+/** PLUGIN: jspsych-visual-search-circle **/
+
+#jspsych-visual-search-circle-svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PLUGIN: jspsych-vsl-animate-occlusion */
+
+#jspsych-vsl-animate-occlusion-canvas {
+    display: block;
+    margin: auto;
+}
+
+/* PLUGIN: jspsych-xab */
+
+.jspsych-xab-stimulus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.jspsych-content {
+    max-width: 95%; /* this is mainly an IE 10-11 fix */
+    text-align: left;
+    margin: auto; /* this is for overflowing content */
+    overflow-x: hidden;
+}
+
+.jspsych-display-element {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-width: 80%;
+}

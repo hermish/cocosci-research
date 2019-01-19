@@ -5,7 +5,7 @@ var body_parser = require('body-parser');
 
 // Instantiate App & Connection
 var app = express();
-var emptySchema = new mongoose.Schema({}, { strict: false });
+var emptySchema = new mongoose.Schema({}, {strict: false});
 var Entry = mongoose.model('Entry', emptySchema);
 
 var location = process.env.CONNECTION;
@@ -27,26 +27,26 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 // Routing
-app.get('/', function(request, response) {
-    response.render('verify.html');
+app.get('/', function (request, response) {
+  response.render('verify.html');
 });
 
-app.get('/index', function(request, response) {
-    response.render('index.html');
+app.get('/index', function (request, response) {
+  response.render('index.html');
 });
 
-app.get('/repeat', function(request, response) {
-    response.render('repeat.html');
+app.get('/repeat', function (request, response) {
+  response.render('repeat.html');
 });
 
 app.post('/experiment-data', function (request, response) {
-    Entry.create({
-        "data": request.body
-    });    
-    response.end();
+  Entry.create({
+    "data": request.body
+  });
+  response.end();
 });
 
 // Start Server
-var server = app.listen(3000, function () { //process.env.PORT
-    console.log("Listening on port %d", server.address().port);
+var server = app.listen(process.env.PORT, function () {
+  console.log("Listening on port %d", server.address().port);
 });
