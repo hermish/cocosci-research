@@ -23,9 +23,9 @@ main.identifier = {
 
 main.paramters = {
   postInstructionsPause: 0,
-  controlPuzzleTime: 25000,
+  controlPuzzleTime: 11000, //2500 in pilot v1
   //controlHintTime: 10000,
-  experimentalPuzzleTime: 20000,
+  experimentalPuzzleTime: 10000, //2000 in pilot v2
   experimentalPreHintTime: 5000,
   //experimentalHintTime: 10000
 };
@@ -84,6 +84,22 @@ main.blocks.controlTrials = {
       trial_duration: main.paramters.controlPuzzleTime
     },
     {
+      stimulus: main.converter.makeHtml(literals.puzzlePage2),
+      trial_duration: main.paramters.controlPuzzleTime
+    },
+    {
+      stimulus: main.converter.makeHtml(literals.puzzlePage3),
+      trial_duration: main.paramters.controlPuzzleTime
+    },
+    {
+      stimulus: main.converter.makeHtml(literals.puzzlePage4),
+      trial_duration: main.paramters.controlPuzzleTime
+    },
+    {
+      stimulus: main.converter.makeHtml(literals.puzzlePage5),
+      trial_duration: main.paramters.controlPuzzleTime
+    },
+    {
       stimulus: main.converter.makeHtml(literals.hintPage),
       choices: ['n'],
       prompt: "<p> Press 'n' once you are done reading the hint and understand the answer.</p>"
@@ -98,6 +114,22 @@ main.blocks.experimentalTrials = {
   timeline: [
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage),
+      trial_duration: main.paramters.experimentalPuzzleTime
+    },
+    {
+      stimulus: main.converter.makeHtml(literals.puzzlePage2),
+      trial_duration: main.paramters.experimentalPuzzleTime
+    },
+    {
+      stimulus: main.converter.makeHtml(literals.puzzlePage3),
+      trial_duration: main.paramters.experimentalPuzzleTime
+    },
+    {
+      stimulus: main.converter.makeHtml(literals.puzzlePage4),
+      trial_duration: main.paramters.experimentalPuzzleTime
+    },
+    {
+      stimulus: main.converter.makeHtml(literals.puzzlePage5),
       trial_duration: main.paramters.experimentalPuzzleTime
     },
     {
