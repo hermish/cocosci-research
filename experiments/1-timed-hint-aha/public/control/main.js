@@ -24,10 +24,10 @@ main.identifier = {
 main.paramters = {
   postInstructionsPause: 0,
   controlPuzzleTime: 25000,
-  controlHintTime: 10000,
+  //controlHintTime: 10000,
   experimentalPuzzleTime: 20000,
   experimentalPreHintTime: 5000,
-  experimentalHintTime: 10000
+  //experimentalHintTime: 10000
 };
 
 
@@ -85,7 +85,9 @@ main.blocks.controlTrials = {
     },
     {
       stimulus: main.converter.makeHtml(literals.hintPage),
-      trial_duration: main.paramters.controlHintTime
+      choices: ['n'],
+      prompt: "<p> Press 'n' once you are done reading the hint and understand the answer.</p>"
+      //trial_duration: main.paramters.controlHintTime
     }
   ]
 };
@@ -104,7 +106,9 @@ main.blocks.experimentalTrials = {
     },
     {
       stimulus: main.converter.makeHtml(literals.hintPage),
-      trial_duration: main.paramters.experimentalHintTime
+      choices: ['n'],
+      prompt: "<p> Press 'n' once you are done reading the hint and understand the answer.</p>"
+      //trial_duration: main.paramters.experimentalHintTime
     }
   ]
 };
