@@ -23,9 +23,11 @@ main.identifier = {
 
 main.paramters = {
   postInstructionsPause: 0,
-  controlPuzzleTime: 11000, //2500 in pilot v1
+  controlPuzzleTime1: 15000, //2500 in pilot v1
+  controlPuzzleTime2: 11000,
   //controlHintTime: 10000,
-  experimentalPuzzleTime: 10000, //2000 in pilot v2
+  experimentalPuzzleTime1: 15000, //2000 in pilot v2
+  experimentalPuzzleTime2: 10000,
   experimentalPreHintTime: 5000,
   //experimentalHintTime: 10000
 };
@@ -81,23 +83,23 @@ main.blocks.controlTrials = {
   timeline: [
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage),
-      trial_duration: main.paramters.controlPuzzleTime
+      trial_duration: main.paramters.controlPuzzleTime1
     },
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage2),
-      trial_duration: main.paramters.controlPuzzleTime
+      trial_duration: main.paramters.controlPuzzleTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage3),
-      trial_duration: main.paramters.controlPuzzleTime
+      trial_duration: main.paramters.controlPuzzleTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage4),
-      trial_duration: main.paramters.controlPuzzleTime
+      trial_duration: main.paramters.controlPuzzleTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage5),
-      trial_duration: main.paramters.controlPuzzleTime
+      trial_duration: main.paramters.controlPuzzleTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.hintPage),
@@ -114,27 +116,27 @@ main.blocks.experimentalTrials = {
   timeline: [
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage),
-      trial_duration: main.paramters.experimentalPuzzleTime
+      trial_duration: main.paramters.experimentalPuzzleTime1
     },
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage2),
-      trial_duration: main.paramters.experimentalPuzzleTime
+      trial_duration: main.paramters.experimentalPuzzleTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage3),
-      trial_duration: main.paramters.experimentalPuzzleTime
+      trial_duration: main.paramters.experimentalPuzzleTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage4),
-      trial_duration: main.paramters.experimentalPuzzleTime
+      trial_duration: main.paramters.experimentalPuzzleTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.puzzlePage5),
-      trial_duration: main.paramters.experimentalPuzzleTime
+      trial_duration: main.paramters.experimentalPuzzleTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.preHintPage),
-      trial_duration: main.paramters.experimentalPreHintTime
+      trial_duration: main.paramters.experimentalPreHintTime2
     },
     {
       stimulus: main.converter.makeHtml(literals.hintPage),
