@@ -136,7 +136,7 @@ main.blocks.experimentalTrials = {
     },
     {
       stimulus: main.converter.makeHtml(literals.preHintPage),
-      trial_duration: main.paramters.experimentalPreHintTime2
+      trial_duration: main.paramters.experimentalPreHintTime
     },
     {
       stimulus: main.converter.makeHtml(literals.hintPage),
