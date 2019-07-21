@@ -137,8 +137,8 @@ jsPsych.init({
     main.blocks.initialDataBuffer,
     main.blocks.generalInstructions,
     main.blocks.trials,
-    main.blocks.surveyData,
     main.blocks.solution,
+    main.blocks.surveyData,
     main.blocks.finalDataBuffer
   ]
 });
