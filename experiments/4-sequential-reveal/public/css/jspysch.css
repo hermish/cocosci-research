@@ -416,4 +416,31 @@ label.jspsych-survey-multi-choice-text input[type="radio"] {
     font-size: 70px;
     text-align: center;
     font-family: monospace;
+    letter-spacing: 10px;
+}
+
+/* Custom */
+input[type='text'] {
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+input[type='text']:focus {
+    outline: none;
+}
+
+#jspsych-survey-likert-next {
+    margin: 0 50%;
+}
+
+#jspsych-survey-text-next {
+    margin: 0 45%;
 }

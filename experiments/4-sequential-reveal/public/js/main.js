@@ -32,7 +32,7 @@ main.blocks.consentPage = { //Link the consent page here
   preamble: main.CONVERTER.makeHtml(pages.consentPage),
   questions: [
     {
-      prompt: '<b>Do you understand and consent to these terms?</b>',
+      prompt: '<strong>Do you understand and consent to these terms?</strong>',
       options: [
         ' I consent to participate ',
         ' I do not consent to participate '
@@ -97,13 +97,13 @@ main.blocks.surveyData = {
   type: 'survey-likert',
   questions: [
     {
-      prompt: '<h1>Some Questions</h1><p>Please rate your pleasantness on a scale of 1-7</p>',
+      prompt: '<h1>Some Questions</h1><p><strong>Please rate your pleasantness on a scale of 1-7.</strong></p>',
       labels: ['very unpleasant', '', '', '', '', '', 'very pleasant'],
       name: 'pleasantness',
       required: true
     },
     {
-      prompt: '<p>An <em>Aha! moment</em> is when the solution suddenly dawns on you and everything is clear immediately. In a flash. As an example, imagine a light bulb that is switched on all at once in contrast to slowly turning up the lights.</p><p>Did you experience an <em>Aha! moment</em> (on a scale of 1-7) after the last anagram was shown to you?</p>',
+      prompt: '<p>An <em>Aha! moment</em> is when the solution suddenly dawns on you and everything is clear immediately. In a flash. As an example, imagine a light bulb that is switched on all at once in contrast to slowly turning up the lights.</p><p><strong>Did you experience an <em>Aha! moment</em> (on a scale of 1-7) after the last anagram was shown to you?</strong></p>',
       labels: ['no, not at all', '', '', '', '', '', 'yes, very high Aha!'],
       name: 'aha',
       required: true
