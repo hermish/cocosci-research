@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Verification</title>
+  <!-- Captcha -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <!-- Styling -->
+  <link href="/css/custom.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- Setup -->
+    <script type="text/javascript">
+      function go() {$('#verify').removeAttr('disabled');};
+    </script>
+    <!-- Body -->
+    <h1>Are you a Robot?</h1>
+    <p>Please first verify you are not a bot.</p>
+    <br/>
+    <center>
+      <form action="?"
+          method="POST"
+          onsubmit="window.location.href = 'main'; return false;">
+        <div class="g-recaptcha"
+           data-callback="go"
+           data-sitekey="6Ldxv4oUAAAAACSxXUxfYSk3_TJwpd0JZ1FeIkIm">
+        </div>
+        <br/>
+        <button id="verify" disabled>Verify</button>
+      </form>
+    </center>
+  </body>
+</html>
