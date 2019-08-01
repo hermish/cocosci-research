@@ -1,16 +1,23 @@
 stimuli = {}
 
 stimuli.instant = [
-  'ONAGRCI',
+  'ORANCIG',
   'CIONAGR',
   'RANGCIO',
   'ANGCIOR',
-  'ORGANCI'
+  'OGRANIC'
 ];
 stimuli.sequential = [
-  'ONAGRCI',
-  'ONGRACI',
-  'OGRNACI',
-  'OGRANCI',
-  'ORGANCI'
+  'ORANCIG',
+  'ORANCGI',
+  'ORAGNCI',
+  'ORAGNIC',
+  'OGRANIC'
 ];
+
+
+
+
+
+
+

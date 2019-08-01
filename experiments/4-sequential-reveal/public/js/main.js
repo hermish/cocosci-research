@@ -103,7 +103,7 @@ main.blocks.surveyData = {
       required: true
     },
     {
-      prompt: '<p>An <em>Aha! moment</em> is when the solution suddenly dawns on you and everything is clear immediately. In a flash. As an example, imagine a light bulb that is switched on all at once in contrast to slowly turning up the lights.</p><p><strong>Did you experience an <em>Aha! moment</em> (on a scale of 1-7) after the last anagram was shown to you?</strong></p>',
+      prompt: '<p>Did you experience an <em>Aha! moment</em> (on a scale of 1-7) after the <b>last</b> anagram was shown to you?</p>',
       labels: ['no, not at all', '', '', '', '', '', 'yes, very high Aha!'],
       name: 'aha',
       required: true
