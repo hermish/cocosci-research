@@ -10,9 +10,9 @@ stimuli.instant = [
 stimuli.sequential = [
   'ORANCIG',
   'ORANCGI',
-  'ORAGNCI',
-  'ORAGNIC',
-  'OGRANIC'
+  'ORANGCI',
+  'ORANGIC',
+  'ORAGNIC'
 ];
 
 
