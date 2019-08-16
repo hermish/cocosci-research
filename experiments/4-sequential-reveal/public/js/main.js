@@ -5,15 +5,15 @@ main = {}
 /* METHODS */
 main.writeExperimentData = function(input) {
   console.log(input);
-  // $.ajax({
-  //     type: "POST",
-  //     url: "/experiment-data",
-  //     data: input,
-  //     contentType: "application/json"
-  //   }).fail(function () {
-  //     alert("Error! Please contact the researcher.");
-  //     window.location.href = "repeat";
-  //   });
+   $.ajax({
+       type: "POST",
+       url: "/experiment-data",
+       data: input,
+       contentType: "application/json"
+     }).fail(function () {
+       alert("Error! Please contact the researcher.");
+       window.location.href = "repeat";
+     });
 }
 
 /* CONSTANTS */

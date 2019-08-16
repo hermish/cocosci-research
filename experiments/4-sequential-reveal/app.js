@@ -11,7 +11,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 /* DATABASE */
-mongoose.connect(process.env.CONNECTION, {useNewUrlParser: true}); 
+mongoose.connect('mongodb://rach0012:insight1@ds151416.mlab.com:51416/insight'); 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection Error'));
 db.once('open', function callback() {
