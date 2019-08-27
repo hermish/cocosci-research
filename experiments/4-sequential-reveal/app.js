@@ -1,29 +1,34 @@
+// Loading Modules
 var express = require('express');
 var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var ejs = require('ejs');
+var body_parser = require('body-parser');
 
-/* SERVER */
+// Instantiate App & Connection
 var app = express();
-app.engine('html', ejs.renderFile);
-app.set('view engine', 'html');
-app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.json());
-
-/* DATABASE */
-mongoose.connect('mongodb://rach0012:insight1@ds151416.mlab.com:51416/insight'); 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'Connection Error'));
-db.once('open', function callback() {
-    console.log('Database Opened!');
-});
-
 var emptySchema = new mongoose.Schema({}, {strict: false});
 var Entry = mongoose.model('Entry', emptySchema);
 
-/* ROUTING */
+
+mongoose.connect('mongodb://rach0012:insight1@ds151416.mlab.com:51416/insight'); 
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', function callback() {
+    console.log('database opened');
+});
+
+// Static Middleware
+app.use(express.static(__dirname + '/public'));
+app.use('/jspsych-6', express.static(__dirname + "/jspsych-6"));
+app.use(body_parser.json());
+
+// View Location and Static HTML
+app.set('views', __dirname + '/public/views');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
+// Routing
 app.get('/', function (request, response) {
-  response.render('verify');
+  response.render('verify.html');
 });
 
 app.get('/main', function (request, response) {
@@ -35,11 +40,13 @@ app.get('/repeat', function (request, response) {
 });
 
 app.post('/experiment-data', function (request, response) {
-  Entry.create({"data": request.body});
+  Entry.create({
+    "data": request.body
+  });
   response.end();
 });
 
-/* SERVER START */
+// Start Server
 var server = app.listen(process.env.PORT || 3000, function () {
   console.log("Listening on port %d", server.address().port);
 });

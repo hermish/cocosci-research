@@ -22,9 +22,6 @@ pilot 4 -  flash flash flash flash hint answer vs flash flash flash flash pause 
 
 pilot 4 - flash(random) flash(random) flash(random) flash(random) answer vs. flash(sequential) flash(sequential) flash(sequential) flash(sequential) answer -- most likely to work and in line with our model predictions -- this has not been run yet and the code is incomplete.
 
-	- Ran this, didn't work -- this is because people's learning increases rapidly in both :-(
-	
-
 pilot 5 - get people's error -- Flash anagram, ask people to estimate time to finish, then give them anagram to solve, then measure time they take to solve + record their AHA.   -- if this works, this would be the most compelling. 
 
 Prompt people about time to finish just like Metcalfe (1986)
