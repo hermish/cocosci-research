@@ -8,8 +8,7 @@ var app = express();
 var emptySchema = new mongoose.Schema({}, {strict: false});
 var Entry = mongoose.model('Entry', emptySchema);
 
-
-mongoose.connect('mongodb://rach0012:insight1@ds151416.mlab.com:51416/insight'); 
+mongoose.connect('mongodb://rach0012:insight2@ds213538.mlab.com:13538/insight2'); 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function callback() {

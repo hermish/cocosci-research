@@ -1,0 +1,24 @@
+anagrams_4 = ["WORD", "DEED", "BELL", "SORT", "PINT", "SNOW", "CARD", "FIND", "YELL", "COLD", "LOCK", "BEER", "COKE", "WHEN", "FAKE", "DATE", "WORN",  "BELT", "MAKE", "DOVE", "HOPE", "GONE",  "COME", "NICE", "GOOD"]
+
+anagrams_4_shuffled = ["WODR", "DDEE", "BLEL", "SOTR", "PTNI", "SOWN", "CDAR", "FNDI", "YLLE", "OCDL", "OLKC", "EBRE", "EOCK", "HNEW", "AEKF", "ADET", "RONW", "TLBE", "EKAM", "VEDO", "OEHP", "ENOG", "MECO", "ECNI", "ODGO"]
+
+anagrams_4_dist = [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4]
+
+anagrams_5 = ["VOLVO", "CLERK", "POKER", "OASIS", "VALUE", "OPIUM", "TAUNT", "APRON", "ELECT", "SCALE",  "COLON", "PATIO", "PUPIL", "GIANT","AMAZE","SWEET", "BACON", "VEGAN", "OCCUR", "AUDIT", "GUARD",  "BOUND", "GUESS", "PHONE", "DONOR"]
+
+anagrams_5_dist = [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4]
+
+anagrams_5_shuffled = ["VLVOO", "CERKL", "PEKOR", "OSAIS", "VLUAE", "OMIUP", "TATUN", "APNRO", "EECLT", "ECSAL", "OLNOC", "PTAOI", "PLUIP", "IATNG", "AZAEM", "WTEES", "BCNOA", "EANVG", "RUCOC", "DTAIU", "URGDA", "UDONB", "USGSE", "OPEHN", "NDROO"]
+
+anagrams_6 = ["UNIQUE", "SHADOW", "DOLLAR", "RANDOM", "KILLER", "BOTTLE", "WEIGHT", "REFUND", "LETTER",  "CARBON", "WIZARD", "BALLET", "BAMBOO", "DEFEAT", "DAZZLE", "DOCTOR", "FALCON", "FEMALE", "KITTEN", "NORWAY", "ORIGIN", "PALACE", "PUNISH", "ROOKIE", "SALARY"]
+
+anagrams_6_shuffled = ["UUIQNE", "SHADWO", "DLLAOR", "RANDMO", "KELLIR", "BOLTTE", "WEHIGT", "RFUNDE", "LETTRE", "AROBCN", "DIZWRA", "BLELAT", "OABMBO", "EFETAD", "DZAEZL", "OCDOTR", "AOLCFN", "ALFEME", "ITTNKE", "NYWROA", "RNOGII", "PACELA", "SNUIPH", "REIOOK", "ALSYAR"]
+
+anagrams_6_dist = [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4]
+
+anagrams_7 = ["TRIVIAL","CLIMATE", "COMFORT", "JAYWALK", "HAMMOCK", "ORGANIC", "DURABLE", "NAUGHTY", "SQUEEZE", "JUMBLED", "CUPCAKE", "EXAMPLE", "CITIZEN", "CAMPING", "RUBBISH",  "EXPLAIN", "GLACIER", "JOURNEY", "POTLUCK", "GARBAGE", "PARADOX", "PLUMBER", "IMAGINE", "QUARREL", "SKETCHY"]
+
+anagrams_7_shuffled = ["TLRIVIA", "CLIMETA", "COFMORT", "JAYLWAK", "HAMKOCM", "ORGIANC", "DURLABE", "NAGHUTY", "SEQUEEZ", "JMDBLEU", "CPCAEKU", "LXAEMPE", "IITZENC", "CNMAPIG", "RHUBBSI", "NEPLAIX", "RGLCIEA", "OURYJEN", "OTKLPUC", "RGABAEG", "AADOPRX", "MELUPBR", "IEAGNIM", "URRAELQ", "KYSTCHE"]
+
+anagrams_7_dist = [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4]
+

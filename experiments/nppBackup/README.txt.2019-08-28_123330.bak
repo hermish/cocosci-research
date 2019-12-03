@@ -1,0 +1,32 @@
+pilot 1 - E E E E E vs H H H H E
+
+- trend seems to be there
+
+Pilot 2
+
+changes:
+	- removed the last question asking people if they thought they got the correct answer
+	- reduced time to 10 seconds
+	- Prompted 'aha' ratings every time after each anagram
+	- didn't ask answers for the anagrams at all (to avoid cheating)
+
+Pilot 3 
+
+changes: 
+    - changed delta with a four word anagram
+	- Results in COS511 report are from this anagram
+
+Most likely all results we get here are because of finally getting an answer right as opposed to aha, I would prefer the below for future. Need to make sure this is a time prediction error for sure and not just a reward prediction error -- oh, I finally got it right or relief. 
+	
+pilot 4 -  flash flash flash flash hint answer vs flash flash flash flash pause answer -- this probably will not work
+
+pilot 4 - flash(random) flash(random) flash(random) flash(random) answer vs. flash(sequential) flash(sequential) flash(sequential) flash(sequential) answer -- most likely to work and in line with our model predictions -- this has not been run yet and the code is incomplete.
+
+	- Ran this, didn't work -- this is because people's learning increases rapidly in both :-(
+
+Pilot 4.2 -- Reveal anagram instantly but in one condition tell people the answer is coming! Aha should be lower. 	
+
+pilot 5 - get people's error -- Flash anagram, ask people to estimate time to finish, then give them anagram to solve, then measure time they take to solve + record their AHA.   -- if this works, this would be the most compelling. 
+
+Prompt people about time to finish just like Metcalfe (1986)
+

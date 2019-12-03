@@ -23,9 +23,21 @@ pilot 4 -  flash flash flash flash hint answer vs flash flash flash flash pause 
 pilot 4 - flash(random) flash(random) flash(random) flash(random) answer vs. flash(sequential) flash(sequential) flash(sequential) flash(sequential) answer -- most likely to work and in line with our model predictions -- this has not been run yet and the code is incomplete.
 
 	- Ran this, didn't work -- this is because people's learning increases rapidly in both :-(
+
+Pilot 4.2 -- Reveal anagram instantly but in one condition tell people the answer is coming! Aha should be lower.
+
+	- This didn't work either :(! This is maybe because people either didn't read the hint prime properly or just didn't believe it or didn't know what it even meant.. 
+
+Pilot 4.3 -- Reveal anagram instantly but in one condition tell people, they will get 5 configurations and if they haven't figured it out, the answer will be revealed to them at the end (i.e. pre-instructions). 2nd condition, don't tell them nothing.  
+	- This didn't work either :( This could be because of between subject problem. Maybe to fix this, we need to prime the subjects about their conditions i.e. give them a practice round or something like that.. 
 	
+Pilot 4.4 -- two conditions -- unexpected and expected. Tell people at the start that they will be given the easy configuration after the 7th round. In unexpected, tell them way earlier i.e. on the 4th round -- should see differing 'aha' moments. Also, recommend to have a small practice round in the beginning for a simpler anagram where we show people 3 rounds and everything works as expected. 
 
-pilot 5 - get people's error -- Flash anagram, ask people to estimate time to finish, then give them anagram to solve, then measure time they take to solve + record their AHA.   -- if this works, this would be the most compelling. 
+		-- Small trend but didn't work as expected -- this could be driven by between subjects factor as well as that when people solve the hard anagram in the expected case, they gave it high aha compared to the phone anagram
+		
+Pilot 4.5 -- one condition -- unexpected and expected. Tell people at the start that they will be given the easy configuration after the 7th round. In unexpected, tell them way earlier i.e. on the 4th round -- should see differing 'aha' moments. This is different from 4.4, as the beginning anagram we give people is also hard. 
 
-Prompt people about time to finish just like Metcalfe (1986)
+pilot 5 - get people's error -- Flash anagram, ask people to estimate time to finish, then give them anagram to solve, then measure time they take to solve + record their AHA.   -- if this works, this would be the most compelling -- this partially worked.
+
+pilot 5.1 -- stronger version: Prompt people about time to finish just like Metcalfe (1986)
 

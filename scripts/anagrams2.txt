@@ -1,0 +1,33 @@
+anagrams_3 = ["THE", "WHY", "CAP", "YES", "CUP", "FUN", "EYE", "SUN", "HAT", "CAN"]
+
+anagrams_3_shuffled_2 = ["TEH", "WYH", "CPA", "YSE", "CPU","FNU", "EEY", "SNU", "HTA", "CNA"]
+
+anagrams_3_shuffled_3 = ["HTE", "HWY", "APC", "EYS", "PCU", "NUF", "YEE", "UNS", "AHT", "ACN"]
+
+anagrams_4 = ["WORD", "DEED", "BELL", "SORT", "PINT", "BELT", "CARD", "FIND", "YELL", "COLD"]
+
+anagrams_4_shuffled_2 = ["WODR", "DDEE", "BLLE", "STRO", "PTIN", "BTEL", "CADR", "FNDI", "YLEL", "CDOL"]
+
+anagrams_4_shuffled_3 = ["OWDR", "EDDE", "LBLE", "TOSR", "TIPN", "TBLE", "RADC", "DIFN", "LYLE","DOCL"]
+
+anagrams_5 = ["VEGAN", "CLERK", "POKER", "OASIS", "GIANT", "OPIUM", "DONOR", "PHONE", "ELECT", "SCALE"]
+
+anagrams_5_shuffled_2 = ["VENGA","CLREK","PEOKR","OSIAS","GIATN","OUIPM","DONRO","PHNEO","ECELT","SCELA"]
+
+anagrams_5_shuffled_3 = ["EVANG", "KLECR","KOERP","SAOSI","IGNAT","POUIM","OONRD","NPOHE","TELCE","ESALC"]
+
+anagrams_6 = ["SHADOW", "DOLLAR", "RANDOM", "SALARY", "WEIGHT", "REFUND", "LETTER",  "CARBON", "WIZARD", "BALLET"]
+
+anagrams_6_shuffled_2 = ["SADOWH","DOLRLA","RAODNM","SALYRA","WEIGTH","RDFUNE","LEETTR","CRABON","WIZRAD","BLLAET"]
+
+anagrams_6_shuffled_3 = ["HSOADW", "RODLLA","MARNOD","AALRYS","IEGWHT","UEFNDR","RETLET","NCRBOA","ZIAWRD","EABLLT"]
+
+anagrams_7 = ["CLIMATE", "JAYWALK", "HAMMOCK", "DURABLE", "NAUGHTY", "GLACIER", "JUMBLED", "EXPLAIN", "GARBAGE", "JOURNEY"]
+
+anagrams_7_shuffled_2 = ["CLEIMAT ","JWAYALK","HAKMOCM","DURAELB","NAYUGHT","GLICAER","JLUMBED","EXPLIAN","GBRAAGE","JNOUREY"]
+
+anagrams_7_shuffled_3 = ["TCILAME","AYKAWLJ","CAMHOMK","EURADBL","AYUGNHT","CLAIGER","LUBMEJD","AXPLINE","BARAGGE","YUOEJRN"]
+
+
+
+
