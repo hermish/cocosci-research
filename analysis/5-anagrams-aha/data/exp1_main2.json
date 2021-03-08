@@ -1,0 +1,740 @@
+[{
+  "_id": {
+    "$oid": "60402f1960a6ef00044a071d"
+  },
+  "data": {
+    "responseType": "start",
+    "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+    "anagrams_seen": [
+      "RAODNM",
+      "OWDR",
+      "SCELA",
+      "YUOEJRN",
+      "HWY"
+    ],
+    "anagrams_answers": [
+      "RANDOM",
+      "WORD",
+      "SCALE",
+      "JOURNEY",
+      "WHY"
+    ]
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60402f4e60a6ef00044a071e"
+  },
+  "data": [
+    {
+      "rt": 6034,
+      "responses": "{\"Q0\":\" I consent to participate\"}",
+      "trial_type": "survey-multi-choice",
+      "trial_index": 0,
+      "time_elapsed": 6043,
+      "internal_node_id": "0.0-0.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "trial_type": "call-function",
+      "trial_index": 1,
+      "time_elapsed": 6046,
+      "internal_node_id": "0.0-1.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "view_history": "[{\"page_index\":0,\"viewing_time\":1184},{\"page_index\":1,\"viewing_time\":803}]",
+      "rt": 1987,
+      "trial_type": "instructions",
+      "trial_index": 2,
+      "time_elapsed": 8033,
+      "internal_node_id": "0.0-2.0-0.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 3055,
+      "responses": "{\"Q0\":\"5 anagrams\"}",
+      "trial_type": "survey-multi-choice",
+      "trial_index": 3,
+      "time_elapsed": 11095,
+      "internal_node_id": "0.0-2.0-1.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 1144,
+      "stimulus": "<blockquote>\n  <p>Now an anagram will be shown to you. <br><br> Press 'v' to view the anagram.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 4,
+      "time_elapsed": 12241,
+      "internal_node_id": "0.0-3.0-0.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": null,
+      "stimulus": "<b><center><h2><p>RAODNM</p></h2></center></b>",
+      "key_press": null,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 5,
+      "time_elapsed": 12775,
+      "internal_node_id": "0.0-3.0-1.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2618.384999999762,
+      "response": "11",
+      "stimulus": "<p>How many <b>minutes</b> do you think you will need to solve this anagram?</p>",
+      "trial_type": "html-slider-response",
+      "trial_index": 6,
+      "time_elapsed": 15395,
+      "internal_node_id": "0.0-3.0-2.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 3705,
+      "responses": "{\"Q0\":\"random\"}",
+      "trial_type": "survey-text",
+      "trial_index": 7,
+      "time_elapsed": 19102,
+      "internal_node_id": "0.0-3.0-3.0-0.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2496,
+      "responses": "{\"Q0\":0}",
+      "trial_type": "survey-likert",
+      "trial_index": 8,
+      "time_elapsed": 21599,
+      "internal_node_id": "0.0-3.0-4.0-0.0",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 1064,
+      "stimulus": "<blockquote>\n  <p>Now an anagram will be shown to you. <br><br> Press 'v' to view the anagram.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 9,
+      "time_elapsed": 22665,
+      "internal_node_id": "0.0-3.1-0.1",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": null,
+      "stimulus": "<b><center><h2><p>OWDR</p></h2></center></b>",
+      "key_press": null,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 10,
+      "time_elapsed": 23180,
+      "internal_node_id": "0.0-3.1-1.1",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2946.4499999994587,
+      "response": "7",
+      "stimulus": "<p>How many <b>minutes</b> do you think you will need to solve this anagram?</p>",
+      "trial_type": "html-slider-response",
+      "trial_index": 11,
+      "time_elapsed": 26130,
+      "internal_node_id": "0.0-3.1-2.1",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 3096,
+      "responses": "{\"Q0\":\"word\"}",
+      "trial_type": "survey-text",
+      "trial_index": 12,
+      "time_elapsed": 29227,
+      "internal_node_id": "0.0-3.1-3.1-0.1",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2116,
+      "responses": "{\"Q0\":1}",
+      "trial_type": "survey-likert",
+      "trial_index": 13,
+      "time_elapsed": 31346,
+      "internal_node_id": "0.0-3.1-4.1-0.1",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 1137,
+      "stimulus": "<blockquote>\n  <p>Now an anagram will be shown to you. <br><br> Press 'v' to view the anagram.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 14,
+      "time_elapsed": 32485,
+      "internal_node_id": "0.0-3.2-0.2",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": null,
+      "stimulus": "<b><center><h2><p>SCELA</p></h2></center></b>",
+      "key_press": null,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 15,
+      "time_elapsed": 32992,
+      "internal_node_id": "0.0-3.2-1.2",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2786.7349999996804,
+      "response": "10",
+      "stimulus": "<p>How many <b>minutes</b> do you think you will need to solve this anagram?</p>",
+      "trial_type": "html-slider-response",
+      "trial_index": 16,
+      "time_elapsed": 35781,
+      "internal_node_id": "0.0-3.2-2.2",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 3745,
+      "responses": "{\"Q0\":\"scale\"}",
+      "trial_type": "survey-text",
+      "trial_index": 17,
+      "time_elapsed": 39527,
+      "internal_node_id": "0.0-3.2-3.2-0.2",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2061,
+      "responses": "{\"Q0\":1}",
+      "trial_type": "survey-likert",
+      "trial_index": 18,
+      "time_elapsed": 41589,
+      "internal_node_id": "0.0-3.2-4.2-0.2",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 1017,
+      "stimulus": "<blockquote>\n  <p>Now an anagram will be shown to you. <br><br> Press 'v' to view the anagram.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 19,
+      "time_elapsed": 42608,
+      "internal_node_id": "0.0-3.3-0.3",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": null,
+      "stimulus": "<b><center><h2><p>YUOEJRN</p></h2></center></b>",
+      "key_press": null,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 20,
+      "time_elapsed": 43121,
+      "internal_node_id": "0.0-3.3-1.3",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2232.245000000148,
+      "response": "7",
+      "stimulus": "<p>How many <b>minutes</b> do you think you will need to solve this anagram?</p>",
+      "trial_type": "html-slider-response",
+      "trial_index": 21,
+      "time_elapsed": 45355,
+      "internal_node_id": "0.0-3.3-2.3",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 3746,
+      "responses": "{\"Q0\":\"journey\"}",
+      "trial_type": "survey-text",
+      "trial_index": 22,
+      "time_elapsed": 49102,
+      "internal_node_id": "0.0-3.3-3.3-0.3",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2298,
+      "responses": "{\"Q0\":1}",
+      "trial_type": "survey-likert",
+      "trial_index": 23,
+      "time_elapsed": 51402,
+      "internal_node_id": "0.0-3.3-4.3-0.3",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 988,
+      "stimulus": "<blockquote>\n  <p>Now an anagram will be shown to you. <br><br> Press 'v' to view the anagram.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 24,
+      "time_elapsed": 52392,
+      "internal_node_id": "0.0-3.4-0.4",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": null,
+      "stimulus": "<b><center><h2><p>HWY</p></h2></center></b>",
+      "key_press": null,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 25,
+      "time_elapsed": 52899,
+      "internal_node_id": "0.0-3.4-1.4",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 1929.920000000493,
+      "response": "18",
+      "stimulus": "<p>How many <b>minutes</b> do you think you will need to solve this anagram?</p>",
+      "trial_type": "html-slider-response",
+      "trial_index": 26,
+      "time_elapsed": 54833,
+      "internal_node_id": "0.0-3.4-2.4",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2571,
+      "responses": "{\"Q0\":\"why\"}",
+      "trial_type": "survey-text",
+      "trial_index": 27,
+      "time_elapsed": 57405,
+      "internal_node_id": "0.0-3.4-3.4-0.4",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    },
+    {
+      "rt": 2110,
+      "responses": "{\"Q0\":0}",
+      "trial_type": "survey-likert",
+      "trial_index": 28,
+      "time_elapsed": 59516,
+      "internal_node_id": "0.0-3.4-4.4-0.4",
+      "responseType": "finish",
+      "participantID": "5hmj0hz6qm1oscgtq79z45lc1o1ykf95",
+      "anagrams_seen": [
+        "RAODNM",
+        "OWDR",
+        "SCELA",
+        "YUOEJRN",
+        "HWY"
+      ],
+      "anagrams_answers": [
+        "RANDOM",
+        "WORD",
+        "SCALE",
+        "JOURNEY",
+        "WHY"
+      ]
+    }
+  ],
+  "__v": 0
+}]
