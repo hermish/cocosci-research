@@ -8,7 +8,7 @@ var app = express();
 var emptySchema = new mongoose.Schema({}, {strict: false});
 var Entry = mongoose.model('Entry', emptySchema);
 
-mongoose.connect("mongodb+srv://rdubey:mongodb1@cluster0.orehk.mongodb.net/insight_norming?retryWrites=true&w=majority"); 
+mongoose.connect("mongodb+srv://rdubey:mongodb1@cluster0.orehk.mongodb.net/insight_probing?retryWrites=true&w=majority"); 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function callback() {

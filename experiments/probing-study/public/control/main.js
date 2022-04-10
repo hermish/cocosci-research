@@ -26,18 +26,24 @@ main.paramters = {
   ViewTime: 500
 };
 
-var time_q = '<p>How many more <b>minutes</b> do you think you will need to solve this problem?</p>'
-var scale = ['0 minutes', '0.5', '1','1.5','2', '2.5', '3 minutes']
+var time_q = '<center><p>How close are you towards solving this problem?</p></center>'
+var scale = ['not close at all', 'halfway there', 'certainly solved']
 
+//var quiz_options = ['My answer to the problem or SKIP if I am unable to solve the problem',
+//        'I have to type nothing', 
+//        'My answer to the problem or HELLO if I am unable to solve the problem', 
+//       'I have to type the correct answer to the problem']
+// shuffle2(quiz_options)        
 
-shuffle(insight_problems)
-shuffle(non_insight_problems)
-shuffle(anagram_problems)
-var random_insight = insight_problems.slice(0, 2) //get 2 problems from the shuffled array
-var random_non_insight = non_insight_problems.slice(0, 2) 
-var random_anagram = anagram_problems.slice(0, 2) 
-var problems = random_insight.concat(random_non_insight, random_anagram)
-shuffle(problems)
+shuffle2(non_insight_problems_easy)
+shuffle2(anagram_problems)
+
+var random_non_insight = non_insight_problems_easy.slice(0, 1)
+
+var random_anagram = anagram_problems.slice(0, 1) 
+
+var problems = random_non_insight.concat(random_anagram)
+shuffle2(problems)
 
 // access the individual problems here
 var i = 0;
@@ -53,10 +59,7 @@ main.blocks.consentPage = { //Link the consent page here
   questions: [
     {
       prompt: 'Do you understand and consent to these terms?',
-      options: [
-        ' I consent to participate',
-        ' I do not consent to participate'
-      ],
+      options: [' I consent to participate', ' I do not consent to participate'],
       required: true
     }
   ],
@@ -82,30 +85,26 @@ main.blocks.initialDataBuffer = {
 main.blocks.generalInstructions = {
   type: 'instructions',
   pages: [
-  		main.converter.makeHtml(literals.generalInstructionsPage),
-      main.converter.makeHtml(literals.generalInstructionsPage2)
-      	],
+      main.converter.makeHtml(literals.generalInstructionsPage),
+      main.converter.makeHtml(literals.generalInstructionsPage2),
+      main.converter.makeHtml(literals.generalInstructionsPage3),
+      main.converter.makeHtml(literals.generalInstructionsPage4),
+      ],
   show_clickable_nav: true,
   post_trial_gap: main.paramters.postInstructionsPause
 };
 
- main.blocks.quiz = {
+ /*main.blocks.quiz = {
  type: "survey-multi-choice",
  preamble: ["Before proceeding, please answer the below question."],
  questions: [
     {
-      prompt: 'How many problems do you have to solve in total in this experiment?',
-      options: [ 
-        '6 problems',
-        '1 problem', 
-        '7 problems', 
-        '3 problems', 
-        '10 problems'        
-      ],
+      prompt: 'What do you have to type in text box provided below each problem?',
+      options: quiz_options,
       required: true
     }
   ], 
-}
+}*/
  
 // ------------------------------ Experiment ----------------------------------------------------
 
@@ -121,44 +120,62 @@ main.blocks.give_answer = {
   choices: jsPsych.NO_KEYS,
   type: 'survey-text', 
   preamble:  function(){return '<b><center><h2>'+main.converter.makeHtml(RandomProblem)+'</h2></center></b>'},
-  questions: [{prompt: '<small><p>Take as much time as you would like. When you think you have solved the problem, type your answer below:</p></small>'}],
-  moreText: '<p><small>\n\n <i>If you are unable to solve this problem and want to move to the next problem, just type NEXT in the box and then click continue</i></small></p>',
+  questions: [{prompt: '<p style="font-size:15px">When you think you have solved the problem, type your answer in the box and click continue.</p>'}],
+  moreText: '<p><small>\n\n <i>If you are unable to solve this problem and want to move to the next problem, just type <b>NEXT</b> and then click continue.</i></small></p>',
   button_label: 'Continue',
-  trial_duration: 15000
+  trial_duration: 10000
   };
 
 main.blocks.time_estimate = {
   type: 'html-slider-response',
   stimulus: time_q,
-    //min:0,
-    //max: 6,
-    //step: 0.1, 
-    //start: 3,
-    require_movement: true,
-    slider_width: 400,
-    labels: scale 
-} 
+  require_movement: true,
+  slider_width: 500,
+  labels: scale,
+  required: true
+}  
+
+/*Use slider-response-2 if you want to add the reading question as well
+main.blocks.time_estimate = {
+  type: 'html-slider-response2',
+  stimulus: time_q,
+  require_movement: true,
+  slider_width: 500,
+  labels: scale,
+  prompt: "&nbsp; &nbsp; Are you done reading the problem?",
+  prompt_labels: ['Yes, I am now trying to solve it', 'No, I am still reading it'],
+  required: true
+}*/ 
 
 main.blocks.loop_node = { //loop node breaks if answer is correct or person decides to skip the answer
     timeline: [main.blocks.give_answer, main.blocks.time_estimate],
     loop_function: function(data){
+        user_rt = data.values()[0].rt
         user_answer = data.values()[0].responses
         user_answer = user_answer.toLowerCase()
-        if(user_answer.includes('next') ){
-            return false; //break the loop if user says next
+        console.log(user_answer.length)
+        
+        if(user_rt < 10000 & user_answer.length > 9){
+          return false;
+        }
+        else if(user_rt < 10000 & user_answer.length == 9){
+            alert('Please type your ANSWER or type NEXT before clicking continue')
+            return true; //break the loop if correct answer
+        }
+        else {
+            //alert('')
+            return true; //else continue looping
         }
     }
 }
-
-
+//{ prompt: 'How likely do you think it is that you correctly solved the previous problem?', 
+// labels: ['1 (Not very likely)', '', '', '', '', '', '7 (Very likely)'], required: true},
 main.blocks.surveyData = {
   timeline: [
     {
       type: 'survey-likert',
-      questions: [{ prompt: 'How likely do you think it is that you correctly solved the previous problem?', 
-      labels: ['1 (Not very likely)', '', '', '', '', '', '10 (Very likely)'], required: true},
-      { prompt: 'How difficult would you rate the previous problem to be?', 
-      labels: ['1 (Very easy)', '', '', '', '', '', '10 (Very hard)'], required: true},
+      questions: [{ prompt: 'How difficult would you rate the previous problem to be?', 
+      labels: ['1 (Very easy)', '', '', '', '', '', '7 (Very hard)'], required: true},
       {prompt: '<p>An Aha! moment is when the solution suddenly dawns on you ' +
       'and everything is clear immediately.'+' In a flash.'+' As an example, ' +
       'imagine a light bulb that is switched on all at once in contrast to ' +
@@ -177,8 +194,8 @@ main.blocks.experimentBlock = {
         // go through all elements of problems array
         i++; //increment by 1
     	RandomProblem = problems[i];  
-        if(i < 6){ 
-            return true; // continue loop if less than 6 because you want to go through all the arrays
+        if(i < 2){ 
+            return true; // continue loop if less than 2 because you want to go through all the arrays
         } else {            
             return false; // else break loop
         }
@@ -208,7 +225,6 @@ jsPsych.init({
     main.blocks.consentPage,
     main.blocks.initialDataBuffer,
     main.blocks.generalInstructions,
-    main.blocks.quiz,
     main.blocks.experimentBlock,
     main.blocks.finalDataBuffer
   ]
@@ -216,9 +232,25 @@ jsPsych.init({
 
 /*utility functions */
 
-function shuffle(obj1) {
+function shuffle(obj1, obj2) {
   var index = obj1.length;
-  var rnd, tmp1;
+  var rnd, tmp1, tmp2;
+
+  while (index) {
+    rnd = Math.floor(Math.random() * index);
+    index -= 1;
+    tmp1 = obj1[index];
+    tmp2 = obj2[index];
+    obj1[index] = obj1[rnd];
+    obj2[index] = obj2[rnd];
+    obj1[rnd] = tmp1;
+    obj2[rnd] = tmp2;
+  }
+}
+
+function shuffle2(obj1) {
+  var index = obj1.length;
+  var rnd, tmp1
 
   while (index) {
     rnd = Math.floor(Math.random() * index);
@@ -226,5 +258,5 @@ function shuffle(obj1) {
     tmp1 = obj1[index];
     obj1[index] = obj1[rnd];
     obj1[rnd] = tmp1;
-   }
+  }
 }

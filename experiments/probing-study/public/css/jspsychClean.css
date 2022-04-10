@@ -33,9 +33,9 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 21px;
 	font-weight: normal;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h3 {
@@ -399,7 +399,7 @@ label.jspsych-survey-multi-choice-text input[type="radio"] {
 
 
 .jspsych-content {
-    max-width: 95%; /* this is mainly an IE 10-11 fix */
+    max-width: 70%; /* this is mainly an IE 10-11 fix */
     text-align: left;
     margin: auto; /* this is for overflowing content */
     overflow-x: hidden;

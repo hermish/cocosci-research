@@ -1,0 +1,779 @@
+[{
+  "_id": {
+    "$oid": "61dca93e07d5640004c6c7a6"
+  },
+  "data": [
+    {
+      "rt": 2716,
+      "responses": "{\"Q0\":\" I consent to participate\"}",
+      "trial_type": "survey-multi-choice",
+      "trial_index": 0,
+      "time_elapsed": 2721,
+      "internal_node_id": "0.0-0.0",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "trial_type": "call-function",
+      "trial_index": 1,
+      "time_elapsed": 2729,
+      "internal_node_id": "0.0-1.0",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 4399,
+      "responses": "{\"Q0\":\"6 problems\"}",
+      "trial_type": "survey-multi-choice",
+      "trial_index": 2,
+      "time_elapsed": 7131,
+      "internal_node_id": "0.0-2.0",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 1854,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 3,
+      "time_elapsed": 8992,
+      "internal_node_id": "0.0-3.0-0.0",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 1346499,
+      "responses": "{\"Q0\":\"\"}",
+      "trial_type": "survey-text",
+      "trial_index": 4,
+      "time_elapsed": 1355504,
+      "internal_node_id": "0.0-3.0-1.0-0.0",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 7074,
+      "responses": "{\"Q0\":1,\"Q1\":0,\"Q2\":1}",
+      "trial_type": "survey-likert",
+      "trial_index": 5,
+      "time_elapsed": 1362582,
+      "internal_node_id": "0.0-3.0-2.0-0.0",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 1612,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 6,
+      "time_elapsed": 1364199,
+      "internal_node_id": "0.0-3.1-0.1",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 7815,
+      "responses": "{\"Q0\":\"\"}",
+      "trial_type": "survey-text",
+      "trial_index": 7,
+      "time_elapsed": 1372030,
+      "internal_node_id": "0.0-3.1-1.1-0.1",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 5117,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":1}",
+      "trial_type": "survey-likert",
+      "trial_index": 8,
+      "time_elapsed": 1377150,
+      "internal_node_id": "0.0-3.1-2.1-0.1",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 1156,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 9,
+      "time_elapsed": 1378311,
+      "internal_node_id": "0.0-3.2-0.2",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 1736,
+      "responses": "{\"Q0\":\"\"}",
+      "trial_type": "survey-text",
+      "trial_index": 10,
+      "time_elapsed": 1380051,
+      "internal_node_id": "0.0-3.2-1.2-0.2",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 3578,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":1}",
+      "trial_type": "survey-likert",
+      "trial_index": 11,
+      "time_elapsed": 1383631,
+      "internal_node_id": "0.0-3.2-2.2-0.2",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 1091,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 12,
+      "time_elapsed": 1384728,
+      "internal_node_id": "0.0-3.3-0.3",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 12242,
+      "responses": "{\"Q0\":\"\"}",
+      "trial_type": "survey-text",
+      "trial_index": 13,
+      "time_elapsed": 1396971,
+      "internal_node_id": "0.0-3.3-1.3-0.3",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 4195,
+      "responses": "{\"Q0\":0,\"Q1\":0,\"Q2\":0}",
+      "trial_type": "survey-likert",
+      "trial_index": 14,
+      "time_elapsed": 1401169,
+      "internal_node_id": "0.0-3.3-2.3-0.3",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 1193,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 15,
+      "time_elapsed": 1402367,
+      "internal_node_id": "0.0-3.4-0.4",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 7315,
+      "responses": "{\"Q0\":\"\"}",
+      "trial_type": "survey-text",
+      "trial_index": 16,
+      "time_elapsed": 1409695,
+      "internal_node_id": "0.0-3.4-1.4-0.4",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 3802,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":2}",
+      "trial_type": "survey-likert",
+      "trial_index": 17,
+      "time_elapsed": 1413500,
+      "internal_node_id": "0.0-3.4-2.4-0.4",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 1231,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 18,
+      "time_elapsed": 1414735,
+      "internal_node_id": "0.0-3.5-0.5",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 6546,
+      "responses": "{\"Q0\":\"\"}",
+      "trial_type": "survey-text",
+      "trial_index": 19,
+      "time_elapsed": 1421283,
+      "internal_node_id": "0.0-3.5-1.5-0.5",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    },
+    {
+      "rt": 4184,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":2}",
+      "trial_type": "survey-likert",
+      "trial_index": 20,
+      "time_elapsed": 1425470,
+      "internal_node_id": "0.0-3.5-2.5-0.5",
+      "responseType": "finish",
+      "participantID": "obc42w72eoet4fncqxc1p7lxkmnw7ra2",
+      "problems_seen": [
+        "Solve for a and b: 3a+6b = 5 and 2a-b=1. In the answer box, provide the values of a and b.",
+        "Calculate the age of Rob given that Rob's father is 45 and he is 15 years older than twice Rob's age.",
+        "Solve this anagram: EURADBL",
+        "Mr. Hardy slipped and fell off a sixty-foot ladder onto the concrete floor below. However, he did not injure himself in any way. How is this possible?",
+        "Anthony and Cleopatra are lying dead on the floor in an Egyptian villa. Nearby is a broken bowl. There are no marks on their bodies and they were not poisoned. Not a person was in the villa when they died. How did they die?",
+        "Solve this anagram: HSOADW"
+      ]
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61dca9dc07d5640004c6c7a8"
+  },
+  "data": [
+    {
+      "rt": 2724,
+      "responses": "{\"Q0\":\" I consent to participate\"}",
+      "trial_type": "survey-multi-choice",
+      "trial_index": 0,
+      "time_elapsed": 2727,
+      "internal_node_id": "0.0-0.0",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "trial_type": "call-function",
+      "trial_index": 1,
+      "time_elapsed": 2735,
+      "internal_node_id": "0.0-1.0",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 4445,
+      "responses": "{\"Q0\":\"6 problems\"}",
+      "trial_type": "survey-multi-choice",
+      "trial_index": 2,
+      "time_elapsed": 7182,
+      "internal_node_id": "0.0-2.0",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 1137,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 3,
+      "time_elapsed": 8324,
+      "internal_node_id": "0.0-3.0-0.0",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 2254,
+      "responses": "{\"Q0\":\"\"}",
+      "trial_type": "survey-text",
+      "trial_index": 4,
+      "time_elapsed": 10591,
+      "internal_node_id": "0.0-3.0-1.0-0.0",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 5241,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":0}",
+      "trial_type": "survey-likert",
+      "trial_index": 5,
+      "time_elapsed": 15835,
+      "internal_node_id": "0.0-3.0-2.0-0.0",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 1236,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 6,
+      "time_elapsed": 17076,
+      "internal_node_id": "0.0-3.1-0.1",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 2220,
+      "responses": "{\"Q0\":\"\"}",
+      "trial_type": "survey-text",
+      "trial_index": 7,
+      "time_elapsed": 19309,
+      "internal_node_id": "0.0-3.1-1.1-0.1",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 4150,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":2}",
+      "trial_type": "survey-likert",
+      "trial_index": 8,
+      "time_elapsed": 23462,
+      "internal_node_id": "0.0-3.1-2.1-0.1",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 760,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 9,
+      "time_elapsed": 24228,
+      "internal_node_id": "0.0-3.2-0.2",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 17940,
+      "responses": "{\"Q0\":\"Cedric\"}",
+      "trial_type": "survey-text",
+      "trial_index": 10,
+      "time_elapsed": 42170,
+      "internal_node_id": "0.0-3.2-1.2-0.2",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 4285,
+      "responses": "{\"Q0\":0,\"Q1\":0,\"Q2\":0}",
+      "trial_type": "survey-likert",
+      "trial_index": 11,
+      "time_elapsed": 46458,
+      "internal_node_id": "0.0-3.2-2.2-0.2",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 1180,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 12,
+      "time_elapsed": 47644,
+      "internal_node_id": "0.0-3.3-0.3",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 10556,
+      "responses": "{\"Q0\":\"22\"}",
+      "trial_type": "survey-text",
+      "trial_index": 13,
+      "time_elapsed": 58202,
+      "internal_node_id": "0.0-3.3-1.3-0.3",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 3925,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":0}",
+      "trial_type": "survey-likert",
+      "trial_index": 14,
+      "time_elapsed": 62130,
+      "internal_node_id": "0.0-3.3-2.3-0.3",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 1148,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 15,
+      "time_elapsed": 63283,
+      "internal_node_id": "0.0-3.4-0.4",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 11792,
+      "responses": "{\"Q0\":\"They were playing chess\"}",
+      "trial_type": "survey-text",
+      "trial_index": 16,
+      "time_elapsed": 75078,
+      "internal_node_id": "0.0-3.4-1.4-0.4",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 4442,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":0}",
+      "trial_type": "survey-likert",
+      "trial_index": 17,
+      "time_elapsed": 79523,
+      "internal_node_id": "0.0-3.4-2.4-0.4",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 1067,
+      "stimulus": "<blockquote>\n  <p>Now a problem will be shown to you. <br><br> Press 'v' to view the problem.</p>\n</blockquote>",
+      "key_press": 86,
+      "trial_type": "html-keyboard-response",
+      "trial_index": 18,
+      "time_elapsed": 80596,
+      "internal_node_id": "0.0-3.5-0.5",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 4167,
+      "responses": "{\"Q0\":\"REFUND\"}",
+      "trial_type": "survey-text",
+      "trial_index": 19,
+      "time_elapsed": 84776,
+      "internal_node_id": "0.0-3.5-1.5-0.5",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    },
+    {
+      "rt": 3598,
+      "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":1}",
+      "trial_type": "survey-likert",
+      "trial_index": 20,
+      "time_elapsed": 88377,
+      "internal_node_id": "0.0-3.5-2.5-0.5",
+      "responseType": "finish",
+      "participantID": "0lvgnwxjmrgzso7vvppsjteq5jch53s4",
+      "problems_seen": [
+        "A man bought a horse for $60 and sold it for $70. Then he bought it back for $80 and sold it for $90. How much did he make or lose in the horse trading business?",
+        "Solve this anagram: MARNOD",
+        "Three spies, suspected as double agents, speak as follows when questioned: Albert: \"Bertie is a mole.\" Bertie: \"Cedric is a mole.\" Cedric: \"Bertie is lying.\" Assuming that moles lie, other agents tell the truth, and there is just one mole among the three, who is the mole? Albert, Bertie, or Cedric?",
+        "Andrew is half the age of Brian, Brian is three times older than Charles and the sum of their ages is 44 years. How old is Charles?",
+        "Two sisters along with a large group of people watched as the queen attacked the king. No one said anything. Why?",
+        "Solve this anagram: RDFUNE"
+      ]
+    }
+  ],
+  "__v": 0
+}]

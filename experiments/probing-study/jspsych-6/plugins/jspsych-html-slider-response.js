@@ -102,7 +102,7 @@ jsPsych.plugins['html-slider-response'] = (function() {
 
   plugin.trial = function(display_element, trial) {
 
-    var html = '<div id="jspsych-html-slider-response-wrapper" style="margin: 100px 0px;">';
+    var html = '<div id="jspsych-html-slider-response-wrapper" style="margin: 100px 100px;">';
     html += '<div id="jspsych-html-slider-response-stimulus">' + trial.stimulus + '</div>';
     html += '<div class="jspsych-html-slider-response-container" style="position:relative; margin: 0 auto 3em auto; ';
     if(trial.slider_width !== null){
