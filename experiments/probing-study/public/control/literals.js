@@ -13,17 +13,17 @@ literals.nextPage = '> Now a problem will be shown to you. <br><br> Press \'v\' 
 
 literals.thankYouPage =  '# Thank You!\n\nThank you for taking part in our experiment! \n\n Here is your secret code -  *C42EF9DE*. Please put this in the survey box to process your payment. \n\n*Purpose of our study:* In this study, we hope to understand how and why people experience Aha! moments during problem-solving.';
 
-//var non_insight_problems_hard = ['Eric is trying to get in shape. He wants to do this by climbing stairs. He starts on the third floor, climbs up five stories, down seven, up six, down three, up four, down four, up five, down three, and then up two again. What floor is he on now?',
-//'Ben spent $42 for shoes. This was $14 less than what he spent for a shirt and twice more expensive than the tie. The tie was $20 cheaper than the jeans. How much was the jeans?',
-//'Andrew is twice the age of Brian, Charles is three times older than Brian, and the sum of their ages is 60 years. How old is Charles?',
-//'Erin had 24 marbles and Evan had 3 marbles. Erin gave some of her marbles to Evan. Now Erin has exactly double the number of marbles that Evan has. How many marbles did Erin give to Evan?',
-//'Lebrun, Lenoir, and Leblanc are, not necessarily in that order, the accountant, warehouseman, and traveling salesman of a firm. The salesman is unmarried. Both Lebrun and Lenoir are married. Lebrun is not the accountant. What job does Lenoir have? Accountant, warehouseman, or salesman?'];
+var non_insight_problems_easy = ['Eric is trying to get in shape. He wants to do this by climbing stairs. He starts on the third floor, climbs up five stories, down seven, up six, down three, up four, down four, up five, down three, and then up two again. What floor is he on now?',
+'Ben spent $42 for shoes. This was $14 less than what he spent for a shirt and twice more expensive than the tie. The tie was $20 cheaper than the jeans. How much was the jeans?',
+'Andrew is twice the age of Brian, Charles is three times older than Brian, and the sum of their ages is 60 years. How old is Charles?',
+'Erin had 24 marbles and Evan had 3 marbles. Erin gave some of her marbles to Evan. Now Erin has exactly double the number of marbles that Evan has. How many marbles did Erin give to Evan?',
+'Lebrun, Lenoir, and Leblanc are, not necessarily in that order, the accountant, warehouseman, and traveling salesman of a firm. The salesman is unmarried. Both Lebrun and Lenoir are married. Lebrun is not the accountant. What job does Lenoir have? Accountant, warehouseman, or salesman?'];
 
-var non_insight_problems_easy = ['The book store is very busy today. There are 25 children listening to a story narrated by 1 person. 35 people are shopping for books. 20 people are studying. 18 people are at the checkout counter. There are 5 cashiers at the counter. How many people are at the bookstore in total?', 
-'Before Gary injured his arm, he was able to type 9 words per minute on his phone. After he injured his arm, he had to use his left arm for a while, and he could only type 6 words per minute on his phone. What is the difference between the number of words he could type in 5 minutes before and after he broke his arm?',
-'Gary had 100 dollars. He went to the grocery store and bought three pints of ice cream for 8 dollars each. Then, he went to the farmer\'s market and bought four dozen eggs for 5 dollars per dozen. Finally, he went to a book store and bought three books for 3 dollars each. How much money does he have left?',
-'Ben spent 40 dollars for shoes. This was 14 more than what he spent for a shirt. The tie was 10 dollars cheaper than the shirt. How much was the tie?',
-'Eric is trying to get in shape. He wants to do this by climbing stairs. He starts on the fourth floor, climbs up five stories, down seven, up six, down three, up four, and then up two again. What floor is he on now?']
+//var non_insight_problems_easy = ['The book store is very busy today. There are 25 children listening to a story narrated by 1 person. 35 people are shopping for books. 20 people are studying. 18 people are at the checkout counter. There are 5 cashiers at the counter. How many people are at the bookstore in total?', 
+//'Before Gary injured his arm, he was able to type 9 words per minute on his phone. After he injured his arm, he had to use his left arm for a while, and he could only type 6 words per minute on his phone. What is the difference between the number of words he could type in 5 minutes before and after he broke his arm?',
+//'Gary had 100 dollars. He went to the grocery store and bought three pints of ice cream for 8 dollars each. Then, he went to the farmer\'s market and bought four dozen eggs for 5 dollars per dozen. Finally, he went to a book store and bought three books for 3 dollars each. How much money does he have left?',
+//'Ben spent 40 dollars for shoes. This was 14 more than what he spent for a shirt. The tie was 10 dollars cheaper than the shirt. How much was the tie?',
+//'Eric is trying to get in shape. He wants to do this by climbing stairs. He starts on the fourth floor, climbs up five stories, down seven, up six, down three, up four, and then up two again. What floor is he on now?']
 
 var anagram_problems = ['Solve this anagram: EURADBL', 
 						'Solve this anagram: MATCILE', 
