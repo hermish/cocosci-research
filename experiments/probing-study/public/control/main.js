@@ -1,5 +1,5 @@
 /* INITIALIZATION */
-// In this experiment people see '5' problems one after another -- just one condition. Their goal is to solve the problems and provide difficulty ratings to the same.
+// In this experiment people see '2' problems one after another -- just one condition. Their goal is to solve the problems and answer probe
 var main = {
   converter: new showdown.Converter(),
   writeExperimentData: function (input) {
@@ -35,12 +35,12 @@ var scale = ['not close at all', 'halfway there', 'certainly solved']
 //       'I have to type the correct answer to the problem']
 // shuffle2(quiz_options)        
 
-shuffle2(non_insight_problems_easy)
-shuffle2(anagram_problems)
+shuffle2(insight_problems)  //shuffle2(non_insight_problems_easy)
+shuffle2(insight_problems2) //shuffle2(anagram_problems)
 
-var random_non_insight = non_insight_problems_easy.slice(0, 1)
+var random_non_insight = insight_problems.slice(0,1)  //non_insight_problems_easy.slice(0, 1)
 
-var random_anagram = anagram_problems.slice(0, 1) 
+var random_anagram = insight_problems2.slice(0,1)    //anagram_problems.slice(0, 1) 
 
 var problems = random_non_insight.concat(random_anagram)
 shuffle2(problems)
